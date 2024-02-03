@@ -34,7 +34,6 @@ public class playerHealth : health
     {
         PlayerHitEvent?.Invoke();
         currentHealth--;
-        Debug.Log("ouch");
         //FMODUnity.RuntimeManager.PlayOneShot(takeDamageSound);
         if (currentHealth <= 0)
         {

@@ -40,8 +40,12 @@ public class BasicEnemy : MonoBehaviour
 
     private void doRotate()
     {
-        Vector3 aim = player.transform.position - transform.position;
-        transform.rotation = Quaternion.Euler(0, 0, (Mathf.Atan2(aim.y, aim.x) * Mathf.Rad2Deg));
+        if (player != null)
+        {
+            Vector3 aim = player.transform.position - transform.position;
+            transform.rotation = Quaternion.Euler(0, 0, (Mathf.Atan2(aim.y, aim.x) * Mathf.Rad2Deg));
+        }
+        
     }
 
     private void shoot()

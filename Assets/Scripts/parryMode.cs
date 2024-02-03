@@ -15,7 +15,7 @@ public class parryMode : MonoBehaviour
     void Start()
     {
         parryVisual.SetActive(false);
-        Time.timeScale = 1.0f;
+        Time.timeScale = 10.0f;
         isParrying = false;
         parryObjects = new List<projectileMove>();
     }
@@ -23,14 +23,14 @@ public class parryMode : MonoBehaviour
     void parryOn()
     {
         parryVisual.SetActive(true);
-        Time.timeScale = 0.1f;
+        Time.timeScale = 1f;
         isParrying = true;
     }
 
     void parryOff()
     {
         parryVisual.SetActive(false);
-        Time.timeScale = 1f;
+        Time.timeScale = 10f;
         isParrying = false;
     }
 

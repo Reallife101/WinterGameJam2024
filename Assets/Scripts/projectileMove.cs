@@ -24,8 +24,8 @@ public class projectileMove : MonoBehaviour
     private void Start()
     {
         timer = 0;
-        //velocity = (transform.up).normalized * speed;
-        //rb.velocity = velocity;
+        velocity = (transform.up).normalized * speed;
+        rb.velocity = velocity;
         deactivateParry();
         hasBeenParryed = false;
     }
@@ -54,7 +54,7 @@ public class projectileMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = transform.position + transform.up * speed * Time.deltaTime;
+        //transform.position = transform.position + transform.up * speed * Time.deltaTime;
         timer = timer + Time.deltaTime;
 
         if (destroyAfterTime && timer > destroytime)
@@ -76,6 +76,8 @@ public class projectileMove : MonoBehaviour
             {
                 hasBeenParryed = true;
                 transform.rotation = Quaternion.Euler(0, 0, (Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg) - 90);
+                velocity = (transform.up).normalized * speed;
+                rb.velocity = velocity;
                 deactivateParry();
             }
         }

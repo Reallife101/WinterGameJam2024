@@ -13,14 +13,18 @@ public class projectileMove : MonoBehaviour
     private bool beingParryed;
     public bool hasBeenParryed;
 
-    private RaycastHit2D nextWallHit;
-    private float travelDistance;
-    private float distanceCovered;
+    
 
 
     // Velocity stuff
     [SerializeField] protected Rigidbody2D rb;
     [SerializeField] protected float speed;
+
+    private RaycastHit2D nextWallHit;
+    private float travelDistance;
+    private float distanceCovered;
+    [SerializeField] protected int maxBounces = 2;
+    private int bounceCount;
     private Vector2 velocity;
 
     //Handle mouse variables
@@ -28,6 +32,7 @@ public class projectileMove : MonoBehaviour
 
     private void Start()
     {
+        bounceCount = 0;
         velocity = (transform.up).normalized * speed;
         rb.velocity = velocity;
         deactivateParry();
@@ -125,13 +130,26 @@ public class projectileMove : MonoBehaviour
 
     private void onWallHit()
     {
-        distanceCovered = 0;
-        Vector2 reflected = Vector2.Reflect(transform.up, nextWallHit.normal);
-        Debug.Log(reflected);
-        transform.rotation = Quaternion.Euler(0, 0, (Mathf.Atan2(reflected.y, reflected.x) * Mathf.Rad2Deg) - 90);
-        velocity = reflected * velocity.magnitude;
-        transform.position = new Vector2(transform.position.x, transform.position.y) + velocity * .1f;
-        rb.velocity = velocity;
-        OnDirectionChange();
+        if (!hasBeenParryed)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            ++bounceCount;
+            if (bounceCount > maxBounces)
+            {
+                Destroy(gameObject);
+            }
+            distanceCovered = 0;
+            Vector2 reflected = Vector2.Reflect(transform.up, nextWallHit.normal);
+            Debug.Log(reflected);
+            transform.rotation = Quaternion.Euler(0, 0, (Mathf.Atan2(reflected.y, reflected.x) * Mathf.Rad2Deg) - 90);
+            velocity = reflected * velocity.magnitude;
+            transform.position = new Vector2(transform.position.x, transform.position.y) + velocity * .1f;
+            rb.velocity = velocity;
+            OnDirectionChange();
+        }
+        
     }
 }

@@ -5,9 +5,9 @@ using UnityEngine;
 
 public abstract class health : MonoBehaviour
 {
-    [SerializeField] int maxHealth;
-    public int currentHealth;
-    [SerializeField] string hurtTag;
+    [SerializeField] protected int maxHealth;
+    protected int currentHealth;
+    [SerializeField] protected string hurtTag = "hurt";
 
     private void Start()
     {

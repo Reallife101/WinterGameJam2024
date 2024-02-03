@@ -11,6 +11,8 @@ public class parryMode : MonoBehaviour
     [SerializeField] healthBar parryBar;
     [SerializeField] float maxTime;
 
+    [SerializeField] Animator ani;
+
     private float currentTime;
 
     private List<projectileMove> parryObjects;
@@ -32,6 +34,7 @@ public class parryMode : MonoBehaviour
         parryVisual.SetActive(true);
         
         isParrying = true;
+        ani.SetBool("isParrying", true);
     }
 
     void parryOff()
@@ -39,6 +42,7 @@ public class parryMode : MonoBehaviour
         parryVisual.SetActive(false);
         Time.timeScale = 10f;
         isParrying = false;
+        ani.SetBool("isParrying", false);
     }
 
     // Update is called once per frame

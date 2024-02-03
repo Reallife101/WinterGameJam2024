@@ -109,6 +109,11 @@ public class projectileMove : MonoBehaviour
             Destroy(gameObject);
         }
 
+        if (hasBeenParryed && collision.gameObject.tag == "Shield")
+        {
+            Destroy(gameObject);
+        }
+
         if (collision.gameObject.tag == "Player")
         {
             //DoDamage
@@ -120,10 +125,10 @@ public class projectileMove : MonoBehaviour
     private void OnDirectionChange()
     {
         nextWallHit = Physics2D.Raycast(transform.position, transform.up, Mathf.Infinity, LayerMask.GetMask("Wall"));
+        distanceCovered = 0f;
         if (nextWallHit)
         {
             travelDistance = nextWallHit.distance;
-            Debug.Log(travelDistance);
         }
         else
         {

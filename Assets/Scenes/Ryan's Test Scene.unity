@@ -437,7 +437,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &496742223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -553,7 +553,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 496742222}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.09, y: 0.34, z: 0}
+  m_LocalPosition: {x: -5.29, y: -1.02, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1195,7 +1195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6a18fc3333226d49adc7566e7a510cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 15
+  moveSpeed: 10
   rb: {fileID: 1317210921}
 --- !u!50 &1317210921
 Rigidbody2D:
@@ -1336,7 +1336,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1732809384}
   - component: {fileID: 1732809385}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Parry Zones
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -14,6 +14,7 @@ public class parryMode : MonoBehaviour
     {
         parryVisual.SetActive(false);
         Time.timeScale = 1.0f;
+        parryObjects = new List<GameObject>();
     }
 
     // Update is called once per frame

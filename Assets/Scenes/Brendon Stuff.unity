@@ -685,7 +685,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1317210917}
   - component: {fileID: 1317210916}
-  - component: {fileID: 1317210918}
   - component: {fileID: 1317210919}
   m_Layer: 0
   m_Name: Player
@@ -762,21 +761,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1317210918
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1317210915}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f945c7a8d453edf4eb4326cbda3facb3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isParrying: 0
-  parryVisual: {fileID: 1732809383}
-  parryRadius: 5
 --- !u!58 &1317210919
 CircleCollider2D:
   m_ObjectHideFlags: 0

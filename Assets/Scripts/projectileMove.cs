@@ -74,6 +74,7 @@ public class projectileMove : MonoBehaviour
 
         if (destroyAfterTime && timer > destroytime)
         {
+            FindObjectOfType<parryMode>().GetComponent<parryMode>().removeObject(this);
             Destroy(gameObject);
         }
 
@@ -104,12 +105,14 @@ public class projectileMove : MonoBehaviour
     {
         if (collision.gameObject.tag == "borders")
         {
+            FindObjectOfType<parryMode>().GetComponent<parryMode>().removeObject(this);
             Destroy(gameObject);
         }
 
         if (collision.gameObject.tag == "Player")
         {
             //DoDamage
+            FindObjectOfType<parryMode>().GetComponent<parryMode>().removeObject(this);
             Destroy(gameObject);
         }
     }

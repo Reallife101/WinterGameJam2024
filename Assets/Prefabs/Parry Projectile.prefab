@@ -132,11 +132,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f9426012b1bfe34188198f861a3fca4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyAfterTime: 0
-  destroytime: 0
+  destroyAfterTime: 1
+  destroytime: 100
   hasBeenParryed: 0
   rb: {fileID: 4147209616268158429}
   speed: 0.3
+  maxBounces: 2
   ui: {fileID: 4147209615783096263}
 --- !u!58 &4147209616268158428
 CircleCollider2D:

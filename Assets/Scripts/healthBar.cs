@@ -7,14 +7,26 @@ public class healthBar : MonoBehaviour
 {
     public Slider slider;
     public Gradient gradient;
+    public Gradient recoverGradient;
     public Image fill;
+
+    public bool isRecovering;
 
     public void setSlider(float value)
     {
         slider.value = value;
 
-        fill.color = gradient.Evaluate(slider.normalizedValue);
+        if (isRecovering)
+        {
+            fill.color = recoverGradient.Evaluate(slider.normalizedValue);
+        }
+        else
+        {
+            fill.color = gradient.Evaluate(slider.normalizedValue);
+        }
+        
     }
+
 
     // Used to add to the value instead of setting
     public void increaseValue(float valueToAdd)

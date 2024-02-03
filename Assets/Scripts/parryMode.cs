@@ -79,6 +79,16 @@ public class parryMode : MonoBehaviour
         }
     }
 
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        projectileMove pm = collision.GetComponent<projectileMove>();
+        if (pm != null && parryObjects.Contains(pm) && pm.hasBeenParryed)
+        {
+            parryObjects.Remove(pm);
+            // Remove things that have been parried
+        }
+    }
+
     private void OnTriggerExit2D(Collider2D other)
     {
         projectileMove pm = other.GetComponent<projectileMove>();

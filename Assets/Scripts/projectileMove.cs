@@ -4,13 +4,19 @@ using UnityEngine;
 
 public class projectileMove : MonoBehaviour
 {
-    public float speed;
     public bool destroyAfterTime;
     public float destroytime;
 
     private float timer;
 
     private bool beingParryed;
+    public bool hasBeenParryed;
+
+
+    // Velocity stuff
+    [SerializeField] protected Rigidbody2D rb;
+    [SerializeField] protected float speed;
+    private Vector2 velocity;
 
     //Handle mouse variables
     [SerializeField] GameObject ui;
@@ -18,16 +24,23 @@ public class projectileMove : MonoBehaviour
     private void Start()
     {
         timer = 0;
+        //velocity = (transform.up).normalized * speed;
+        //rb.velocity = velocity;
         deactivateParry();
+        hasBeenParryed = false;
     }
 
     public void ActivateParry()
     {
-        beingParryed = true;
-        if (ui != null)
+        if (!hasBeenParryed)
         {
-            ui.SetActive(true);
+            beingParryed = true;
+            if (ui != null)
+            {
+                ui.SetActive(true);
+            }
         }
+        
     }
     public void deactivateParry()
     {
@@ -59,6 +72,12 @@ public class projectileMove : MonoBehaviour
             Vector3 dir = mousePos - gameObject.transform.position;
             ui.transform.rotation = Quaternion.Euler(0, 0, (Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg)-90);
 
+            if (Input.GetButtonDown("Fire1"))
+            {
+                hasBeenParryed = true;
+                transform.rotation = Quaternion.Euler(0, 0, (Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg) - 90);
+                deactivateParry();
+            }
         }
 
     }

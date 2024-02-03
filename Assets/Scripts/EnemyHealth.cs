@@ -5,9 +5,21 @@ using UnityEngine;
 
 public class EnemyHealth : health
 {
+    [SerializeField] private GameObject bubbleShield;
+
     public override void TakeDamage()
     {
-        Destroy(gameObject);
+        --currentHealth;
+        if (currentHealth == 0) { 
+            Destroy(gameObject);
+        }
+        else if (currentHealth == 1)
+        {
+            if (bubbleShield != null)
+            {
+                bubbleShield.SetActive(false);
+            }
+        }
     }
 
     protected override void OnTriggerEnter2D(Collider2D collision)

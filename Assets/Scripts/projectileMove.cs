@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -63,7 +64,7 @@ public class projectileMove : MonoBehaviour
         distanceCovered += velocity.magnitude * Time.deltaTime;
         if (distanceCovered >= travelDistance)
         {
-            //onWallHit();
+            onWallHit();
         }
 
         if (destroyAfterTime && timer > destroytime)
@@ -110,16 +111,26 @@ public class projectileMove : MonoBehaviour
 
     private void OnDirectionChange()
     {
-        nextWallHit = Physics2D.Raycast(transform.position, transform.up, LayerMask.GetMask("Wall"));
-        travelDistance = nextWallHit.distance;
+        nextWallHit = Physics2D.Raycast(transform.position, transform.up, Mathf.Infinity, LayerMask.GetMask("Wall"));
+        if (nextWallHit)
+        {
+            travelDistance = nextWallHit.distance;
+            Debug.Log(travelDistance);
+        }
+        else
+        {
+            travelDistance = Mathf.Infinity;
+        }
     }
 
     private void onWallHit()
     {
         distanceCovered = 0;
         Vector2 reflected = Vector2.Reflect(transform.up, nextWallHit.normal);
-        transform.rotation = Quaternion.Euler(0, 0, (Mathf.Atan2(reflected.y, reflected.x) * Mathf.Rad2Deg));
+        Debug.Log(reflected);
+        transform.rotation = Quaternion.Euler(0, 0, (Mathf.Atan2(reflected.y, reflected.x) * Mathf.Rad2Deg) - 90);
         velocity = reflected * velocity.magnitude;
+        transform.position = new Vector2(transform.position.x, transform.position.y) + velocity * .1f;
         rb.velocity = velocity;
         OnDirectionChange();
     }

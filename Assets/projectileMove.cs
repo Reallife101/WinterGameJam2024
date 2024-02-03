@@ -10,9 +10,32 @@ public class projectileMove : MonoBehaviour
 
     private float timer;
 
+    private bool beingParryed;
+
+    //Handle mouse variables
+    [SerializeField] GameObject ui;
+
     private void Start()
     {
         timer = 0;
+        deactivateParry();
+    }
+
+    public void ActivateParry()
+    {
+        beingParryed = true;
+        if (ui != null)
+        {
+            ui.SetActive(true);
+        }
+    }
+    public void deactivateParry()
+    {
+        beingParryed = false;
+        if (ui != null)
+        {
+            ui.SetActive(false);
+        }
     }
 
     // Update is called once per frame
@@ -25,6 +48,19 @@ public class projectileMove : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        //handly parry image
+        if(beingParryed)
+        {
+            //-----reposition image--------
+
+            // Get mouse Position
+            Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector3 dir = mousePos - gameObject.transform.position;
+            ui.transform.rotation = Quaternion.Euler(0, 0, (Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg)-90);
+
+        }
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

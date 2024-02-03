@@ -21,7 +21,7 @@ public class projectileMove : MonoBehaviour
     [SerializeField] protected float speed;
 
     private RaycastHit2D nextWallHit;
-    private float travelDistance;
+    protected float travelDistance;
     private float distanceCovered;
     [SerializeField] protected int maxBounces = 2;
     private int bounceCount;
@@ -30,14 +30,15 @@ public class projectileMove : MonoBehaviour
     //Handle mouse variables
     [SerializeField] GameObject ui;
 
-    private void Start()
+    protected virtual void Start()
     {
         bounceCount = 0;
         velocity = (transform.up).normalized * speed;
         rb.velocity = velocity;
         deactivateParry();
         hasBeenParryed = false;
-        OnDirectionChange();
+        if (velocity.magnitude <= .001f)
+            OnDirectionChange();
     }
     public bool GetParryed()
     {
@@ -79,6 +80,7 @@ public class projectileMove : MonoBehaviour
         if (destroyAfterTime && timer > destroytime)
         {
             FindObjectOfType<parryMode>().GetComponent<parryMode>().removeObject(this);
+            Debug.Log("destroy 1");
             Destroy(gameObject);
         }
 
@@ -110,6 +112,7 @@ public class projectileMove : MonoBehaviour
         if (collision.gameObject.tag == "borders")
         {
             FindObjectOfType<parryMode>().GetComponent<parryMode>().removeObject(this);
+            Debug.Log("destroy 2");
             Destroy(gameObject);
         }
 
@@ -129,7 +132,7 @@ public class projectileMove : MonoBehaviour
     {
         nextWallHit = Physics2D.Raycast(transform.position, transform.up, Mathf.Infinity, LayerMask.GetMask("Wall"));
         distanceCovered = 0f;
-        if (nextWallHit)
+        if (velocity.magnitude >= 0.001f && nextWallHit)
         {
             travelDistance = nextWallHit.distance;
         }
@@ -143,6 +146,7 @@ public class projectileMove : MonoBehaviour
     {
         if (!hasBeenParryed)
         {
+            Debug.Log("destroy 3");
             Destroy(gameObject);
         }
         else
@@ -150,6 +154,7 @@ public class projectileMove : MonoBehaviour
             ++bounceCount;
             if (bounceCount > maxBounces)
             {
+                Debug.Log("destroy 4");
                 Destroy(gameObject);
             }
             distanceCovered = 0;

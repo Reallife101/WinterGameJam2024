@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class barrelMove : projectileMove
 {
-    private void Start()
+    protected override void Start()
     {
         deactivateParry();
         hasBeenParryed = false;
+        travelDistance = Mathf.Infinity;
     }
 }

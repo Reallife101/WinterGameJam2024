@@ -37,7 +37,7 @@ public class projectileMove : MonoBehaviour
         rb.velocity = velocity;
         deactivateParry();
         hasBeenParryed = false;
-        if (velocity.magnitude <= .001f)
+        if (velocity.magnitude >= .01f)
             OnDirectionChange();
     }
     public bool GetParryed()

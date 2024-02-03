@@ -46,7 +46,7 @@ public class BasicEnemy : MonoBehaviour
 
     private void shoot()
     {
-        Instantiate(bullet, transform.position + transform.right * bulletOffset, transform.rotation);
+        Instantiate(bullet, transform.position + transform.up * bulletOffset, transform.rotation*Quaternion.Euler(0f, 0f,-90f));
         shootTimer = shootDelay;
     }
 }

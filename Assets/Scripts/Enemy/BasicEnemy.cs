@@ -27,7 +27,7 @@ public class BasicEnemy : MonoBehaviour
         if (shootTimer <= 0)
         {
             RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.right);
-            if (hit.collider.gameObject.tag.Equals("Player"))
+            if (hit && hit.collider.gameObject.tag.Equals("Player"))
             {
                 shoot();
             }
@@ -50,7 +50,7 @@ public class BasicEnemy : MonoBehaviour
 
     private void shoot()
     {
-        Instantiate(bullet, transform.position + transform.up * bulletOffset, transform.rotation*Quaternion.Euler(0f, 0f,-90f));
+        Instantiate(bullet, transform.position + transform.right * bulletOffset, transform.rotation*Quaternion.Euler(0f, 0f,-90f));
         shootTimer = shootDelay;
     }
 }

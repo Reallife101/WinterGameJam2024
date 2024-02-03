@@ -5,6 +5,7 @@ using UnityEngine;
 public class BasicEnemy : MonoBehaviour
 {
     [SerializeField] private GameObject bullet;
+    [SerializeField] private float bulletOffset;
     [SerializeField] private float shootDelay;
     private float shootTimer;
     private GameObject player;
@@ -27,7 +28,9 @@ public class BasicEnemy : MonoBehaviour
         {
             RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.right);
             if (hit.collider.gameObject.tag.Equals("Player"))
-            shoot();
+            {
+                shoot();
+            }
         }
         else
         {
@@ -43,7 +46,7 @@ public class BasicEnemy : MonoBehaviour
 
     private void shoot()
     {
-        Instantiate(bullet, transform.position, transform.rotation);
+        Instantiate(bullet, transform.position + transform.right * bulletOffset, transform.rotation);
         shootTimer = shootDelay;
     }
 }

@@ -26,8 +26,9 @@ public class BasicEnemy : MonoBehaviour
     {
         if (shootTimer <= 0)
         {
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.right);
-            if (hit.collider.gameObject.tag.Equals("Player"))
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.right, Mathf.Infinity, ~LayerMask.GetMask("ignoreEnemyRaycast"));
+
+            if (hit && hit.collider.gameObject.tag.Equals("Player"))
             {
                 shoot();
             }
@@ -40,13 +41,17 @@ public class BasicEnemy : MonoBehaviour
 
     private void doRotate()
     {
-        Vector3 aim = player.transform.position - transform.position;
-        transform.rotation = Quaternion.Euler(0, 0, (Mathf.Atan2(aim.y, aim.x) * Mathf.Rad2Deg));
+        if (player != null)
+        {
+            Vector3 aim = player.transform.position - transform.position;
+            transform.rotation = Quaternion.Euler(0, 0, (Mathf.Atan2(aim.y, aim.x) * Mathf.Rad2Deg));
+        }
+        
     }
 
     private void shoot()
     {
-        Instantiate(bullet, transform.position + transform.right * bulletOffset, transform.rotation);
+        Instantiate(bullet, transform.position + transform.right * bulletOffset, transform.rotation*Quaternion.Euler(0f, 0f,-90f));
         shootTimer = shootDelay;
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,10 +13,18 @@ public class projectileMove : MonoBehaviour
     private bool beingParryed;
     public bool hasBeenParryed;
 
+    
+
 
     // Velocity stuff
     [SerializeField] protected Rigidbody2D rb;
     [SerializeField] protected float speed;
+
+    private RaycastHit2D nextWallHit;
+    private float travelDistance;
+    private float distanceCovered;
+    [SerializeField] protected int maxBounces = 2;
+    private int bounceCount;
     private Vector2 velocity;
 
     //Handle mouse variables
@@ -23,10 +32,16 @@ public class projectileMove : MonoBehaviour
 
     private void Start()
     {
+        bounceCount = 0;
         velocity = (transform.up).normalized * speed;
         rb.velocity = velocity;
         deactivateParry();
         hasBeenParryed = false;
+        OnDirectionChange();
+    }
+    public bool GetParryed()
+    {
+        return hasBeenParryed;
     }
 
     public void ActivateParry()
@@ -55,9 +70,15 @@ public class projectileMove : MonoBehaviour
     {
         //transform.position = transform.position + transform.up * speed * Time.deltaTime;
         timer = timer + Time.deltaTime;
+        distanceCovered += velocity.magnitude * Time.deltaTime;
+        if (distanceCovered >= travelDistance)
+        {
+            onWallHit();
+        }
 
         if (destroyAfterTime && timer > destroytime)
         {
+            FindObjectOfType<parryMode>().GetComponent<parryMode>().removeObject(this);
             Destroy(gameObject);
         }
 
@@ -78,6 +99,7 @@ public class projectileMove : MonoBehaviour
                 velocity = (transform.up).normalized * speed;
                 rb.velocity = velocity;
                 deactivateParry();
+                OnDirectionChange();
             }
         }
 
@@ -87,14 +109,58 @@ public class projectileMove : MonoBehaviour
     {
         if (collision.gameObject.tag == "borders")
         {
+            FindObjectOfType<parryMode>().GetComponent<parryMode>().removeObject(this);
+            Destroy(gameObject);
+        }
+
+        if (hasBeenParryed && collision.gameObject.tag == "Shield")
+        {
             Destroy(gameObject);
         }
 
         if (collision.gameObject.tag == "Player")
         {
             //DoDamage
-            Destroy(gameObject);
+            FindObjectOfType<parryMode>().GetComponent<parryMode>().removeObject(this);
         }
     }
 
+    private void OnDirectionChange()
+    {
+        nextWallHit = Physics2D.Raycast(transform.position, transform.up, Mathf.Infinity, LayerMask.GetMask("Wall"));
+        distanceCovered = 0f;
+        if (nextWallHit)
+        {
+            travelDistance = nextWallHit.distance;
+        }
+        else
+        {
+            travelDistance = Mathf.Infinity;
+        }
+    }
+
+    private void onWallHit()
+    {
+        if (!hasBeenParryed)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            ++bounceCount;
+            if (bounceCount > maxBounces)
+            {
+                Destroy(gameObject);
+            }
+            distanceCovered = 0;
+            Vector2 reflected = Vector2.Reflect(transform.up, nextWallHit.normal);
+            Debug.Log(reflected);
+            transform.rotation = Quaternion.Euler(0, 0, (Mathf.Atan2(reflected.y, reflected.x) * Mathf.Rad2Deg) - 90);
+            velocity = reflected * velocity.magnitude;
+            transform.position = new Vector2(transform.position.x, transform.position.y) + velocity * .1f;
+            rb.velocity = velocity;
+            OnDirectionChange();
+        }
+        
+    }
 }

@@ -12,29 +12,46 @@ public class playerHealth : health
     [SerializeField] float invulTime;
     //[SerializeField] float timeSlowTime = 0.75f;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    protected override void OnTriggerEnter2D(Collider2D collision)
     {
         if ((collision.gameObject.tag == getHurtTag()) && !invul)
         {
-            StartCoroutine(invincibilityCoroutine());
-            TakeDamage();
+            if (collision.gameObject.GetComponent<projectileMove>() != null)
+            {
+                if (!collision.gameObject.GetComponent<projectileMove>().GetParryed())
+                {
+                    TakeDamage();
+                }
+            }
+            else
+            {
+                TakeDamage();
+            }
         }
     }
-
-    private void OnCollisionEnter2D(Collision2D collision)
+    protected override void OnCollisionEnter2D(Collision2D collision)
     {
         if ((collision.gameObject.tag == getHurtTag()) && !invul)
         {
-            StartCoroutine(invincibilityCoroutine());
-            TakeDamage();
+            if (collision.gameObject.GetComponent<projectileMove>() != null)
+            {
+                if (!collision.gameObject.GetComponent<projectileMove>().GetParryed())
+                {
+                    TakeDamage();
+                }
+            }
+            else
+            {
+                TakeDamage();
+            }
         }
     }
 
     public override void TakeDamage()
     {
+        StartCoroutine(invincibilityCoroutine());
         PlayerHitEvent?.Invoke();
         currentHealth--;
-        Debug.Log("ouch");
         //FMODUnity.RuntimeManager.PlayOneShot(takeDamageSound);
         if (currentHealth <= 0)
         {

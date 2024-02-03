@@ -5,24 +5,28 @@ using UnityEngine.UI;
 
 public class healthBar : MonoBehaviour
 {
-    public Slider slider;
     public Gradient gradient;
-    public Gradient recoverGradient;
-    public Image fill;
+    public Image fillGood;
+    public Image fillBad;
 
     public bool isRecovering;
 
+    private float maxVal = 1f;
+
     public void setSlider(float value)
     {
-        slider.value = value;
+        fillGood.fillAmount = value / maxVal;
+        fillBad.fillAmount = value / maxVal;
 
         if (isRecovering)
         {
-            fill.color = recoverGradient.Evaluate(slider.normalizedValue);
+            fillBad.gameObject.SetActive(true);
+            fillGood.gameObject.SetActive(false);
         }
         else
         {
-            fill.color = gradient.Evaluate(slider.normalizedValue);
+            fillBad.gameObject.SetActive(false);
+            fillGood.gameObject.SetActive(true);
         }
         
     }
@@ -31,21 +35,20 @@ public class healthBar : MonoBehaviour
     // Used to add to the value instead of setting
     public void increaseValue(float valueToAdd)
     {
-        slider.value += valueToAdd;
-
-        fill.color = gradient.Evaluate(slider.normalizedValue);
+        fillGood.fillAmount += valueToAdd;
     }
 
     public void sliderMax(float value)
     {
-        slider.maxValue = value;
-        slider.value = value;
-
-        fill.color = gradient.Evaluate(1f);
+        maxVal = value;
+        fillGood.fillAmount = 1f;
+        fillBad.fillAmount = 1f;
+        fillBad.gameObject.SetActive(false);
+        fillGood.gameObject.SetActive(true);
     }
 
     public float getValue()
     {
-        return slider.value;
+        return fillGood.fillAmount;
     }
 }

@@ -6,12 +6,8 @@ public class topDownMovement : MonoBehaviour
 {
     [SerializeField] float moveSpeed;
     [SerializeField] Rigidbody2D rb;
+    [SerializeField] Animator ani;
     private Vector2 movement;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
@@ -21,5 +17,8 @@ public class topDownMovement : MonoBehaviour
 
         movement.Normalize();
         rb.velocity = movement*moveSpeed*Time.deltaTime;
+
+        ani.SetFloat("Horizontal", movement.x);
+        ani.SetFloat("Vertical", movement.y);
     }
 }

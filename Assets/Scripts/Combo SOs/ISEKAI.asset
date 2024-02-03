@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0040dbdbd3f094348b7745aa51c2325e, type: 3}
+  m_Name: ISEKAI
+  m_EditorClassIdentifier: 
+  letterGradeSprite: {fileID: 0}
+  letterGradeText: GUNDERLAND
+  comboMeterColor: {r: 0.990566, g: 0.9674595, b: 0.006229852, a: 1}
+  pointsRequiredToNext: 5000
+  pointMultiplier: 2.5
+  nextTier: {fileID: 0}
+  prevTier: {fileID: 11400000, guid: b17bada8410f70c4a996fc2828563446, type: 2}
+  cameraZoomAmount: 9.5
+  bloomIntensity: 7
+  chromaticAbberationIntensity: 1
+  vignetteIntensity: 0.6
+  comboSound:
+    Guid:
+      Data1: 1225134581
+      Data2: 1324621490
+      Data3: 203976068
+      Data4: -1704186797
+    Path: event:/UI SFX/G2
+  dastardlyComboSound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 

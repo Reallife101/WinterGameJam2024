@@ -7,7 +7,7 @@ public class projectileMove : MonoBehaviour
     public bool destroyAfterTime;
     public float destroytime;
 
-    private float timer;
+    private float timer=0;
 
     private bool beingParryed;
     public bool hasBeenParryed;
@@ -23,7 +23,6 @@ public class projectileMove : MonoBehaviour
 
     private void Start()
     {
-        timer = 0;
         velocity = (transform.up).normalized * speed;
         rb.velocity = velocity;
         deactivateParry();

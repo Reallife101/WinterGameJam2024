@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0040dbdbd3f094348b7745aa51c2325e, type: 3}
+  m_Name: S
+  m_EditorClassIdentifier: 
+  letterGradeSprite: {fileID: 0}
+  letterGradeText: Sadistic
+  comboMeterColor: {r: 0.8962264, g: 0.19132188, b: 0.17473589, a: 1}
+  pointsRequiredToNext: 3750
+  pointMultiplier: 2
+  nextTier: {fileID: 11400000, guid: 8f3b7678ddcb4a348a81287d598b55a7, type: 2}
+  prevTier: {fileID: 11400000, guid: bb908a1f6f4ca904f8d7605ca37f8b74, type: 2}
+  cameraZoomAmount: 10
+  bloomIntensity: 4.5
+  chromaticAbberationIntensity: 0.7
+  vignetteIntensity: 0.55
+  comboSound:
+    Guid:
+      Data1: 1872289275
+      Data2: 1339220846
+      Data3: -813722439
+      Data4: 306863168
+    Path: event:/UI SFX/D
+  dastardlyComboSound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 

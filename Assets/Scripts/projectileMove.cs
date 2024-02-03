@@ -63,7 +63,7 @@ public class projectileMove : MonoBehaviour
         distanceCovered += velocity.magnitude * Time.deltaTime;
         if (distanceCovered >= travelDistance)
         {
-            onWallHit();
+            //onWallHit();
         }
 
         if (destroyAfterTime && timer > destroytime)

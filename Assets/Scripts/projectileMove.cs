@@ -93,7 +93,7 @@ public class projectileMove : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             //DoDamage
-            //Destroy(gameObject);
+            Destroy(gameObject);
         }
     }
 

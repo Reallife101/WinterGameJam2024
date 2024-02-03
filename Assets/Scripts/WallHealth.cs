@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class WallHealth : health
+public class WallHealth : health
 {
 
     public override void TakeDamage()

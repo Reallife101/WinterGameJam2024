@@ -39,6 +39,10 @@ public class projectileMove : MonoBehaviour
         hasBeenParryed = false;
         OnDirectionChange();
     }
+    public bool GetParryed()
+    {
+        return hasBeenParryed;
+    }
 
     public void ActivateParry()
     {

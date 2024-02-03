@@ -927,7 +927,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5245259493963118350, guid: d897e920b3cdf404caef81648ff2f74a, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d897e920b3cdf404caef81648ff2f74a, type: 3}
@@ -1812,8 +1812,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6a18fc3333226d49adc7566e7a510cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
+  moveSpeed: 5
   rb: {fileID: 1317210921}
+  ani: {fileID: 1317210922}
 --- !u!50 &1317210921
 Rigidbody2D:
   serializedVersion: 4

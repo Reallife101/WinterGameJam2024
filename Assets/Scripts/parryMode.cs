@@ -30,7 +30,7 @@ public class parryMode : MonoBehaviour
     void parryOn()
     {
         parryVisual.SetActive(true);
-        Time.timeScale = 1f;
+        
         isParrying = true;
     }
 
@@ -61,10 +61,12 @@ public class parryMode : MonoBehaviour
         {
             if (isParrying)
             {
+                Time.timeScale = 1f;
                 parryObjects[0].ActivateParry();
             }
             else
             {
+                Time.timeScale = 10f;
                 parryObjects[0].deactivateParry();
             }
             
@@ -73,7 +75,14 @@ public class parryMode : MonoBehaviour
         // Drain healthBar
         if(isParrying)
         {
-            currentTime -= Time.deltaTime;
+            if (parryObjects.Count > 0)
+            {
+                currentTime -= Time.deltaTime;
+            }
+            else
+            {
+                currentTime -= Time.deltaTime/3f;
+            }
 
             //if it hits bottom, go to recovery
             if (currentTime <=0)

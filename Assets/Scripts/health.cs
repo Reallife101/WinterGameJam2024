@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Video;
 
 public abstract class health : MonoBehaviour
 {
@@ -19,19 +20,21 @@ public abstract class health : MonoBehaviour
         return hurtTag;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
         if ((collision.gameObject.tag == hurtTag))
         {
             TakeDamage();
+            Destroy(collision.gameObject);
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    protected virtual void OnCollisionEnter2D(Collision2D collision)
     {
         if ((collision.gameObject.tag == hurtTag) )
         {
             TakeDamage();
+            Destroy(collision.gameObject);
         }
     }
 

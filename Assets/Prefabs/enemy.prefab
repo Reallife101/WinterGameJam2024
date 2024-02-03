@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 1004262805609164692}
   - component: {fileID: 7540110752200967192}
   - component: {fileID: -3511732112707262004}
+  - component: {fileID: 5957789526745634467}
+  - component: {fileID: 1732712544064910240}
   m_Layer: 6
   m_Name: enemy
   m_TagString: Untagged
@@ -97,6 +99,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ec141ce81b5c7d4d9476bf9be7d22ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 7386105501112009333, guid: 78f9fd9720a97e745ba33f6ffdea2098, type: 3}
-  bulletOffset: 0
-  shootDelay: 1
+  bullet: {fileID: 4147209616268158424, guid: 08d1dd47aed9743479fee7f3ad14d55e, type: 3}
+  bulletOffset: 0.625
+  shootDelay: 7
+--- !u!114 &5957789526745634467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5245259493963118350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be48f7e6ae98d084d93e6dcfce226e23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 1
+  hurtTag: hurt
+--- !u!61 &1732712544064910240
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5245259493963118350}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.6075, y: 2.16}
+    newSize: {x: 6.43, y: 8.64}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.6075, y: 2.16}
+  m_EdgeRadius: 0

@@ -12,6 +12,10 @@ public class projectileMove : MonoBehaviour
     private bool beingParryed;
     public bool hasBeenParryed;
 
+    private RaycastHit2D nextWallHit;
+    private float travelDistance;
+    private float distanceCovered;
+
 
     // Velocity stuff
     [SerializeField] protected Rigidbody2D rb;
@@ -27,6 +31,7 @@ public class projectileMove : MonoBehaviour
         rb.velocity = velocity;
         deactivateParry();
         hasBeenParryed = false;
+        OnDirectionChange();
     }
 
     public void ActivateParry()
@@ -55,6 +60,11 @@ public class projectileMove : MonoBehaviour
     {
         //transform.position = transform.position + transform.up * speed * Time.deltaTime;
         timer = timer + Time.deltaTime;
+        distanceCovered += velocity.magnitude * Time.deltaTime;
+        if (distanceCovered >= travelDistance)
+        {
+            onWallHit();
+        }
 
         if (destroyAfterTime && timer > destroytime)
         {
@@ -78,6 +88,7 @@ public class projectileMove : MonoBehaviour
                 velocity = (transform.up).normalized * speed;
                 rb.velocity = velocity;
                 deactivateParry();
+                OnDirectionChange();
             }
         }
 
@@ -97,4 +108,19 @@ public class projectileMove : MonoBehaviour
         }
     }
 
+    private void OnDirectionChange()
+    {
+        nextWallHit = Physics2D.Raycast(transform.position, transform.up, LayerMask.GetMask("Wall"));
+        travelDistance = nextWallHit.distance;
+    }
+
+    private void onWallHit()
+    {
+        distanceCovered = 0;
+        Vector2 reflected = Vector2.Reflect(transform.up, nextWallHit.normal);
+        transform.rotation = Quaternion.Euler(0, 0, (Mathf.Atan2(reflected.y, reflected.x) * Mathf.Rad2Deg));
+        velocity = reflected * velocity.magnitude;
+        rb.velocity = velocity;
+        OnDirectionChange();
+    }
 }

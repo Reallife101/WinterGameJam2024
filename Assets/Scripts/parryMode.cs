@@ -7,7 +7,11 @@ public class parryMode : MonoBehaviour
     public bool isParrying;
 
     [SerializeField] GameObject parryVisual;
-    [SerializeField] float parryRadius;
+
+    [SerializeField] healthBar parryBar;
+    [SerializeField] float maxTime;
+
+    private float currentTime;
 
     private List<projectileMove> parryObjects;
 
@@ -15,22 +19,25 @@ public class parryMode : MonoBehaviour
     void Start()
     {
         parryVisual.SetActive(false);
-        Time.timeScale = 1.0f;
+        Time.timeScale = 10.0f;
         isParrying = false;
         parryObjects = new List<projectileMove>();
+        parryBar.sliderMax(maxTime);
+
+        currentTime = maxTime;
     }
 
     void parryOn()
     {
         parryVisual.SetActive(true);
-        Time.timeScale = 0.1f;
+        Time.timeScale = 1f;
         isParrying = true;
     }
 
     void parryOff()
     {
         parryVisual.SetActive(false);
-        Time.timeScale = 1f;
+        Time.timeScale = 10f;
         isParrying = false;
     }
 
@@ -38,7 +45,7 @@ public class parryMode : MonoBehaviour
     void Update()
     {
         // Handle Parry
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && !parryBar.isRecovering)
         {
             parryOn();
         }
@@ -48,7 +55,7 @@ public class parryMode : MonoBehaviour
             parryOff();
         }
 
-        // get
+        // Do Parry Mechanics
         if (parryObjects.Count>0)
         {
             if (isParrying)
@@ -62,11 +69,34 @@ public class parryMode : MonoBehaviour
             
         }
 
-        if (Input.GetKeyDown(KeyCode.W))
+        // Drain healthBar
+        if(isParrying)
         {
-            Debug.Log(parryObjects.Count);
+            currentTime -= Time.deltaTime;
+
+            //if it hits bottom, go to recovery
+            if (currentTime <=0)
+            {
+                parryBar.isRecovering = true;
+                parryOff();
+            }
+
+            currentTime = Mathf.Max(0f, currentTime);
 
         }
+        else
+        {
+            currentTime += Time.deltaTime/20;
+
+            //Stop Recovering
+            if (parryBar.isRecovering && currentTime >= maxTime/2)
+            {
+                parryBar.isRecovering = false;
+            }
+            currentTime = Mathf.Min(maxTime, currentTime);
+            
+        }
+        parryBar.setSlider(currentTime);
     }
 
     private void OnTriggerEnter2D(Collider2D other)

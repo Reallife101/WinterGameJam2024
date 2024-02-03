@@ -100,8 +100,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 4147209616268158424, guid: 08d1dd47aed9743479fee7f3ad14d55e, type: 3}
-  bulletOffset: 0
-  shootDelay: 1
+  bulletOffset: 0.625
+  shootDelay: 7
 --- !u!114 &5957789526745634467
 MonoBehaviour:
   m_ObjectHideFlags: 0

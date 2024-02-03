@@ -26,7 +26,7 @@ public class BasicEnemy : MonoBehaviour
     {
         if (shootTimer <= 0)
         {
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.right);
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.right, ~LayerMask.GetMask("ignoreEnemyRaycast");
             if (hit.collider.gameObject.tag.Equals("Player"))
             {
                 shoot();

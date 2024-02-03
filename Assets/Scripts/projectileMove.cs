@@ -118,7 +118,6 @@ public class projectileMove : MonoBehaviour
         {
             //DoDamage
             FindObjectOfType<parryMode>().GetComponent<parryMode>().removeObject(this);
-            Destroy(gameObject);
         }
     }
 

@@ -91,7 +91,6 @@ public class projectileMove : MonoBehaviour
 
             // Get mouse Position
             Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Debug.Log(mousePos);
             Vector3 dir = mousePos - gameObject.transform.position;
             ui.transform.rotation = Quaternion.Euler(0, 0, (Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg)-90);
 

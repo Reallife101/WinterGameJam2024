@@ -51,7 +51,6 @@ public class parryMode : MonoBehaviour
         // Handle Parry
         if (Input.GetKeyDown(KeyCode.Space) && !parryBar.isRecovering)
         {
-            Debug.Log(parryObjects.Count);
             parryOn();
         }
 
@@ -137,11 +136,10 @@ public class parryMode : MonoBehaviour
     {
         if (pm != null && parryObjects.Contains(pm))
         {
-            Debug.Log(pm.gameObject);
             parryObjects.Remove(pm);
-            StartCoroutine(deleteAfterDelay(pm));
             // Remove things that have been parried
         }
+        StartCoroutine(deleteAfterDelay(pm));
     }
     private IEnumerator deleteAfterDelay(projectileMove pm)
     {

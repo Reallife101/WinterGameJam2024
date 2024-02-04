@@ -1,29 +1,56 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
+using static UnityEditor.PlayerSettings;
 
 public class BasicEnemy : MonoBehaviour
 {
     [SerializeField] private GameObject bullet;
     [SerializeField] private float bulletOffset;
     [SerializeField] private float shootDelay;
+    [SerializeField] NavMeshAgent agent;
     private float shootTimer;
     private GameObject player;
+    private bool aggroActive = false;
+
+    [Header("StateMachineStuff")]
+    public LayerMask playerLayer;
+    public LayerMask wallLayer;
+    public float detectionRange = 100000;
+    public float moveSpeed;
+    [SerializeField] List<GameObject> waypoints = new List<GameObject>();
+    private EnemyState state;
+    public GameObject PLAYER { get { return player; }}
 
     private void Start()
     {
+        state = new PatrolState(waypoints, this, Random.Range(0, waypoints.Count));
         shootTimer = shootDelay;
         player = GameObject.FindWithTag("Player");
     }
 
+    public void toggleAggro(bool aggro)
+    {
+        aggroActive = aggro;
+    }
+
+    public void SetDestination(Vector3 destination)
+    {
+        agent.SetDestination(destination);
+    }
+
     private void Update()
     {
+        state.OnUpdate();
         doRotate();
         tryShoot();
     }
 
     private void tryShoot()
     {
+        if(!aggroActive) { return; }
+
         if (shootTimer <= 0)
         {
             RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.right, Mathf.Infinity, ~LayerMask.GetMask("ignoreEnemyRaycast"));

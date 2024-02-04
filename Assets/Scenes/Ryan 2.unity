@@ -857,8 +857,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: XXXXXXX
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 795552937e7336b4f891a916d771809f, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 795552937e7336b4f891a916d771809f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5ea884dcbee895449a81f6bab4cff479, type: 2}
+  m_sharedMaterial: {fileID: -5592932785179948860, guid: 5ea884dcbee895449a81f6bab4cff479, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4703,8 +4703,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: COMBO
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 795552937e7336b4f891a916d771809f, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 795552937e7336b4f891a916d771809f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5ea884dcbee895449a81f6bab4cff479, type: 2}
+  m_sharedMaterial: {fileID: -5592932785179948860, guid: 5ea884dcbee895449a81f6bab4cff479, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4947,8 +4947,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: SCORE
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 795552937e7336b4f891a916d771809f, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 795552937e7336b4f891a916d771809f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5ea884dcbee895449a81f6bab4cff479, type: 2}
+  m_sharedMaterial: {fileID: -5592932785179948860, guid: 5ea884dcbee895449a81f6bab4cff479, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7667,8 +7667,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: XXX
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 795552937e7336b4f891a916d771809f, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 795552937e7336b4f891a916d771809f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5ea884dcbee895449a81f6bab4cff479, type: 2}
+  m_sharedMaterial: {fileID: -5592932785179948860, guid: 5ea884dcbee895449a81f6bab4cff479, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -10610,6 +10610,13 @@ MonoBehaviour:
   - {fileID: 296040216}
   - {fileID: 232546105}
   - {fileID: 1817186666}
+  TakeDamageSFX:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!1 &2082710399
 GameObject:
   m_ObjectHideFlags: 0

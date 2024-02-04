@@ -8,7 +8,8 @@ public class topDownMovement : MonoBehaviour
     [SerializeField] Rigidbody2D rb;
     [SerializeField] Animator ani;
     [SerializeField] FMODUnity.EventReference FootstepSFX;
-    [SerializeField] float footstepSpeed = 0.5f;
+    [SerializeField] float footstepSFXSpeed;
+    private float footstepSpeed = 0.5f;
     float timer = 0.0f;
     private Vector2 movement;
 
@@ -30,6 +31,6 @@ public class topDownMovement : MonoBehaviour
             FMODUnity.RuntimeManager.PlayOneShot(FootstepSFX);
             timer = 0.0f;
         } 
-        timer += 0.002f;
+        timer += footstepSFXSpeed;
     }
 }

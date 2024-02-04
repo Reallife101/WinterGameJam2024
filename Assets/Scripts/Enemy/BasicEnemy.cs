@@ -19,10 +19,7 @@ public class BasicEnemy : MonoBehaviour
     private bool aggroActive = false;
 
     [Header("StateMachineStuff")]
-    public LayerMask playerLayer;
-    public LayerMask wallLayer;
     public float detectionRange = 100000;
-    public float moveSpeed;
     [SerializeField] List<GameObject> waypoints = new List<GameObject>();
     private EnemyState state;
     public GameObject PLAYER { get { return player; }}
@@ -46,8 +43,8 @@ public class BasicEnemy : MonoBehaviour
 
     private void Update()
     {
-        state.OnUpdate();
         doRotate();
+        state = state.OnUpdate();
         tryShoot();
     }
 

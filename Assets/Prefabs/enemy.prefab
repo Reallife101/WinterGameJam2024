@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5957789526745634467}
   - component: {fileID: 1732712544064910240}
   - component: {fileID: 1337095344592272117}
+  - component: {fileID: 5096431773810966252}
   m_Layer: 6
   m_Name: enemy
   m_TagString: Untagged
@@ -106,14 +107,7 @@ MonoBehaviour:
   burstDelay: 8
   burstSize: 1
   agent: {fileID: 1337095344592272117}
-  playerLayer:
-    serializedVersion: 2
-    m_Bits: 0
-  wallLayer:
-    serializedVersion: 2
-    m_Bits: 0
   detectionRange: 100000
-  moveSpeed: 0
   waypoints:
   - {fileID: 5245259493963118350}
 --- !u!114 &5957789526745634467
@@ -179,3 +173,15 @@ NavMeshAgent:
   m_BaseOffset: 1.08
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &5096431773810966252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5245259493963118350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e39f6090724e4a4a8aadeb042afa2bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

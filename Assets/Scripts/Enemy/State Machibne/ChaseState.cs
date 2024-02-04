@@ -9,11 +9,12 @@ public class ChaseState : EnemyState
     {
         lastSeenPosition = lastSeen;
         enemy.SetDestination(lastSeen);
+        Debug.Log("Chase Switch");
     }
 
     public override EnemyState OnUpdate()
     {
-        Vector2 v = enemy.gameObject.transform.position - patrolPoints[patrolIndex].transform.position;
+        Vector2 v = enemy.gameObject.transform.position - lastSeenPosition;
         if (v.magnitude < .01f)
         {
             int index = Random.Range(0, patrolPoints.Count);
@@ -21,8 +22,8 @@ public class ChaseState : EnemyState
             return base.OnUpdate();
         }
 
-        RaycastHit2D hit = Physics2D.Raycast(enemy.transform.position, enemy.PLAYER.transform.position, enemy.detectionRange, (1 << enemy.playerLayer) | (1 << enemy.wallLayer));
-        if (hit.collider != null && hit.collider.gameObject.tag == "Player")
+        RaycastHit2D hit = Physics2D.Raycast(enemy.transform.position, enemy.transform.right, Mathf.Infinity, ~LayerMask.GetMask("ignoreEnemyRaycast"));
+        if (hit && hit.collider.gameObject.tag == "Player")
         {
             nextState = new AggroState(patrolPoints, enemy, patrolIndex);
             return base.OnUpdate();

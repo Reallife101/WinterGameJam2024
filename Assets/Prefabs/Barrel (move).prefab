@@ -145,8 +145,8 @@ MonoBehaviour:
   speed: 0.7
   maxBounces: 2
   ui: {fileID: 671080087959905186}
-  blastRadius: 5
-  ani: {fileID: 0}
+  blastRadius: 2.5
+  explosion: {fileID: 1134129239631916, guid: 6145096fe78596440a6ad2f31373192c, type: 3}
 --- !u!95 &3830476207779301333
 Animator:
   serializedVersion: 4

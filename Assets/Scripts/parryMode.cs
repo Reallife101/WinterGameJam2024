@@ -144,7 +144,11 @@ public class parryMode : MonoBehaviour
     private IEnumerator deleteAfterDelay(projectileMove pm)
     {
         yield return new WaitForSeconds(.01f);
-        Destroy(pm.gameObject);
+        if (pm !=null && pm.gameObject!=null)
+        {
+            Destroy(pm.gameObject);
+
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other)

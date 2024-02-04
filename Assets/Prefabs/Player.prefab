@@ -405,7 +405,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2738334659345445429, guid: 73e532eb6a133534da2d7d70256c51ed, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2738334659345445430, guid: 73e532eb6a133534da2d7d70256c51ed, type: 3}
       propertyPath: m_Name
@@ -413,7 +413,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2738334659345445430, guid: 73e532eb6a133534da2d7d70256c51ed, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2738334659345445434, guid: 73e532eb6a133534da2d7d70256c51ed, type: 3}
       propertyPath: gO

@@ -31,6 +31,11 @@ public class projectileMove : MonoBehaviour
     //Handle mouse variables
     [SerializeField] GameObject ui;
 
+    //Audio
+    [SerializeField] FMODUnity.EventReference parrySFX;
+    [SerializeField] FMODUnity.EventReference ricoSFX;
+    private bool isParrySFX = false;
+
     protected virtual void Start()
     {
         bounceCount = 0;
@@ -48,6 +53,11 @@ public class projectileMove : MonoBehaviour
 
     public void ActivateParry()
     {
+        if (!isParrySFX)
+        {
+            FMODUnity.RuntimeManager.PlayOneShot(parrySFX);
+            isParrySFX = true;
+        }
         if (!hasBeenParryed)
         {
             beingParryed = true;
@@ -101,6 +111,7 @@ public class projectileMove : MonoBehaviour
                 velocity = (transform.up).normalized * speed;
                 rb.velocity = velocity;
                 deactivateParry();
+                isParrySFX = false;
                 OnDirectionChange();
             }
         }
@@ -135,6 +146,7 @@ public class projectileMove : MonoBehaviour
         if (velocity.magnitude >= 0.001f && nextWallHit)
         {
             travelDistance = nextWallHit.distance;
+            FMODUnity.RuntimeManager.PlayOneShot(ricoSFX);
         }
         else
         {

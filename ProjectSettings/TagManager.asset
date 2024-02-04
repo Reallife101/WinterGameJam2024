@@ -7,6 +7,7 @@ TagManager:
   - hurt
   - Shield
   - FxTemporaire
+  - enemy
   layers:
   - Default
   - TransparentFX

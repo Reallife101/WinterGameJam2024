@@ -111,6 +111,7 @@ MonoBehaviour:
   parryBar: {fileID: 0}
   maxTime: 7
   ani: {fileID: 1303111552525577135}
+  lerpDelay: 0.3
   ShieldWorkieSFX:
     Guid:
       Data1: 728043239

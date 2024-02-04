@@ -26,15 +26,14 @@ public class BasicEnemy : MonoBehaviour
 
     private void Start()
     {
+        if(SurviveManager.instance != null)
+        {
+            waypoints = SurviveManager.instance.WAYPOINTS;
+        }
+
         state = new PatrolState(waypoints, this, Random.Range(0, waypoints.Count));
         shootTimer = shootDelay;
         player = GameObject.FindWithTag("Player");
-    }
-
-    public void SetWaypoints(List<GameObject> _waypoints)
-    {
-        waypoints.Clear();
-        waypoints = _waypoints;
     }
 
     public void toggleAggro(bool aggro)

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using static UnityEditor.Rendering.CameraUI;
 
+[System.Serializable]
 public class EnemySpawnClass
 {
     public GameObject enemyPrefab;
@@ -18,10 +19,32 @@ public class SurviveManager : MonoBehaviour
     [SerializeField]
     private List<GameObject> spawnPoints;
     [SerializeField]
-    private List<Transform> waypoints;
+    private List<GameObject> waypoints;
+
+    [SerializeField] GameObject win;
+    [SerializeField] GameObject lose;
+
+    private bool gameDone = false;
+
+    public List<GameObject> WAYPOINTS { get { return waypoints; } }
+
     [SerializeField]
     private float spawnRate;
     private float spawnRateProgress;
+
+    public static SurviveManager instance;
+
+    private void Awake()
+    {
+        if(instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
 
     public GameObject chooseEnemy()
@@ -56,12 +79,21 @@ public class SurviveManager : MonoBehaviour
     void Start()
     {
         timeLeft = timeToSurvive;
-        spawnRateProgress = spawnRate;
+        spawnRateProgress = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(gameDone) { return; }
+
+        if (GameObject.FindGameObjectWithTag("Player") == null)
+        {
+            Time.timeScale = 0f;
+            lose.SetActive(true);
+            gameDone = true;
+        }
+
         timeToSurvive -= Time.deltaTime;
         spawnRateProgress -= Time.deltaTime;
 
@@ -71,8 +103,15 @@ public class SurviveManager : MonoBehaviour
 
             foreach(GameObject spawnpoint in spawnPoints)
             {
-                BasicEnemy enemy = Instantiate(chooseEnemy(), spawnpoint.transform.position, Quaternion.identity).GetComponent<BasicEnemy>();
+                Instantiate(chooseEnemy(), spawnpoint.transform.position, Quaternion.identity);
             }
+        }
+
+        if(timeToSurvive < 0)
+        {
+            Time.timeScale = 0f;
+            win.SetActive(true);
+            gameDone = true;
         }
 
     }

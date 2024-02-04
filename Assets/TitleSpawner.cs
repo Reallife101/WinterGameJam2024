@@ -30,7 +30,7 @@ public class TitleSpawner : MonoBehaviour
     {
         timer = delay;
         GameObject g = Instantiate(toSpawn);
-        Destroy(g, 15f);
+        Destroy(g, 10f);
 
     }
 }

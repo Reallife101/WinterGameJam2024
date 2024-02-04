@@ -46,6 +46,7 @@ public class parryMode : MonoBehaviour
         Time.timeScale = 10f;
         isParrying = false;
         ani.SetBool("isParrying", false);
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("SlowDown", 0);
     }
 
     // Update is called once per frame
@@ -79,7 +80,6 @@ public class parryMode : MonoBehaviour
             {
                 Time.timeScale = 10f;
                 parryObjects[0].deactivateParry();
-                FMODUnity.RuntimeManager.StudioSystem.setParameterByName("SlowDown", 0);
             }
             
         }

@@ -16,6 +16,9 @@ public class parryMode : MonoBehaviour
 
     private float currentTime;
 
+    [SerializeField] private float lerpDelay;
+    private float lerpCounter;
+
     private List<projectileMove> parryObjects;
 
     // Audio Stuff
@@ -49,6 +52,7 @@ public class parryMode : MonoBehaviour
     void parryOff()
     {
         isParrying = false;
+        lerpCounter = 0f;
         Time.timeScale = 10f;
        //parryVisual.SetActive(false);
         parryVFX.GetComponent<ForceField>().Toggle();
@@ -81,7 +85,9 @@ public class parryMode : MonoBehaviour
         {
             if (isParrying)
             {
-                Time.timeScale = 1f;
+                if (Time.timeScale > 0) 
+                    lerpCounter = Mathf.Min(lerpCounter + Time.deltaTime / Time.timeScale, lerpDelay);
+                Time.timeScale = Mathf.Lerp(10f, 1f, lerpCounter / lerpDelay);
                 parryObjects[0].ActivateParry();
                 FMODUnity.RuntimeManager.StudioSystem.setParameterByName("SlowDown", 1);
             }
@@ -98,7 +104,7 @@ public class parryMode : MonoBehaviour
         {
             if (parryObjects.Count > 0)
             {
-                currentTime -= Time.deltaTime;
+                currentTime -= Time.deltaTime * Mathf.Lerp(.4f, 1f, lerpCounter / lerpDelay);
             }
             else
             {

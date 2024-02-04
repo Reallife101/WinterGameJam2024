@@ -26,15 +26,14 @@ public class BasicEnemy : MonoBehaviour
 
     private void Start()
     {
+        if(SurviveManager.instance != null)
+        {
+            waypoints = SurviveManager.instance.WAYPOINTS;
+        }
+
         state = new PatrolState(waypoints, this, Random.Range(0, waypoints.Count));
         shootTimer = shootDelay;
         player = GameObject.FindWithTag("Player");
-    }
-
-    public void SetWaypoints(List<GameObject> _waypoints)
-    {
-        waypoints.Clear();
-        waypoints = _waypoints;
     }
 
     public void toggleAggro(bool aggro)
@@ -67,7 +66,7 @@ public class BasicEnemy : MonoBehaviour
         {
             if (shootTimer <= 0)
             {
-                RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.right, Mathf.Infinity, ~LayerMask.GetMask("ignoreEnemyRaycast"));
+                RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.right, Mathf.Infinity, ~LayerMask.GetMask("ignoreEnemyRaycast", "Hole"));
 
                 if (hit && hit.collider.gameObject.tag.Equals("Player"))
                 {

@@ -6,9 +6,10 @@ public class StartGame : MonoBehaviour
 {
     private bool lateStartExecuted = false;
 
-    [SerializeField] GameObject kill;
-    [SerializeField] GameObject them;
-    [SerializeField] GameObject all;
+    [SerializeField] GameObject marker;
+    [SerializeField] GameObject three;
+    [SerializeField] GameObject two;
+    [SerializeField] GameObject one;
 
 
     void Update()
@@ -34,24 +35,25 @@ public class StartGame : MonoBehaviour
 
     private IEnumerator deleteAfterDelay()
     {
+        three.SetActive(false);
+        two.SetActive(false);
+        one.SetActive(false);
         yield return new WaitForSeconds(1f);
         Time.timeScale = 0.1f;
-        kill.SetActive(true);
-        them.SetActive(false);
-        all.SetActive(false);
+        marker.SetActive(true);
+
+        three.SetActive(true);
+        yield return new WaitForSeconds(0.1f);
+        three.SetActive(false);
+        two.SetActive(true);
 
         yield return new WaitForSeconds(0.1f);
-        kill.SetActive(false);
-        them.SetActive(true);
-        all.SetActive(false);
+        two.SetActive(false);
+        one.SetActive(true);
 
         yield return new WaitForSeconds(0.1f);
-        kill.SetActive(false);
-        them.SetActive(false);
-        all.SetActive(true);
-
-        yield return new WaitForSeconds(0.1f);
-        all.SetActive(false);
+        one.SetActive(false);
+        marker.SetActive(false);
 
 
         Time.timeScale = 10f;

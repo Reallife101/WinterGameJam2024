@@ -5,12 +5,16 @@ using UnityEngine;
 public class barrelMove : projectileMove
 {
     [SerializeField] float blastRadius;
+    
+
 
     protected virtual void OnCollisionEnter2D(Collision2D collision)
     {
         explode();
 
     }
+
+
 
     protected void explode()
     {

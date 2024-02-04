@@ -166,6 +166,7 @@ MonoBehaviour:
   maxBounces: 2
   ui: {fileID: 671080087959905186}
   blastRadius: 5
+  ani: {fileID: 6209901796870865946}
 --- !u!1 &671080087959905186
 GameObject:
   m_ObjectHideFlags: 0

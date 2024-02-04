@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class barrelmoveStill : barrelMove
 {
+    [SerializeField] Animator ani;
+
     protected override void OnCollisionEnter2D(Collision2D collision)
     {
         if (hasBeenParryed || collision.gameObject.tag == "hurt")
@@ -11,6 +13,12 @@ public class barrelmoveStill : barrelMove
             explode();
         }
 
+    }
+
+    private void Update()
+    {
+        ani.SetFloat("speed", rb.velocity.magnitude);
+        base.Update();
     }
 
     protected override void Start()

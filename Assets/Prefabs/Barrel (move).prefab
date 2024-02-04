@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 671080087283281693}
   - component: {fileID: 671080087283281692}
   - component: {fileID: 671080087283281667}
-  - component: {fileID: 6209901796870865946}
+  - component: {fileID: 3830476207779301333}
   m_Layer: 0
   m_Name: Barrel (move)
   m_TagString: Untagged
@@ -146,7 +146,8 @@ MonoBehaviour:
   maxBounces: 2
   ui: {fileID: 671080087959905186}
   blastRadius: 5
---- !u!95 &6209901796870865946
+  ani: {fileID: 0}
+--- !u!95 &3830476207779301333
 Animator:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -156,7 +157,7 @@ Animator:
   m_GameObject: {fileID: 671080087283281666}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: cdfa492183bee104e991104ad5d167fd, type: 2}
+  m_Controller: {fileID: 9100000, guid: 125f15444c83ed946866c06d7b958788, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

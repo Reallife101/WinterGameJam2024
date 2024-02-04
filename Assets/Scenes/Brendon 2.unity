@@ -4058,6 +4058,26 @@ PrefabInstance:
       propertyPath: parryBar
       value: 
       objectReference: {fileID: 766957145530784628}
+    - target: {fileID: 1303111552525577123, guid: 837fde8f2ef771641a48081f153f4951, type: 3}
+      propertyPath: ShieldNoWorkieSFX.Path
+      value: event:/[SFX] Shield Non Trigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 1303111552525577123, guid: 837fde8f2ef771641a48081f153f4951, type: 3}
+      propertyPath: ShieldNoWorkieSFX.Guid.Data1
+      value: 184171064
+      objectReference: {fileID: 0}
+    - target: {fileID: 1303111552525577123, guid: 837fde8f2ef771641a48081f153f4951, type: 3}
+      propertyPath: ShieldNoWorkieSFX.Guid.Data2
+      value: 1237224878
+      objectReference: {fileID: 0}
+    - target: {fileID: 1303111552525577123, guid: 837fde8f2ef771641a48081f153f4951, type: 3}
+      propertyPath: ShieldNoWorkieSFX.Guid.Data3
+      value: 489060278
+      objectReference: {fileID: 0}
+    - target: {fileID: 1303111552525577123, guid: 837fde8f2ef771641a48081f153f4951, type: 3}
+      propertyPath: ShieldNoWorkieSFX.Guid.Data4
+      value: 1232426913
+      objectReference: {fileID: 0}
     - target: {fileID: 1303111552525577126, guid: 837fde8f2ef771641a48081f153f4951, type: 3}
       propertyPath: m_Name
       value: Player (1)
@@ -4436,6 +4456,8 @@ GameObject:
   - component: {fileID: 1423176596}
   - component: {fileID: 1423176595}
   - component: {fileID: 1423176599}
+  - component: {fileID: 1423176601}
+  - component: {fileID: 1423176600}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -4576,6 +4598,50 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1423176600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1423176594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
+--- !u!114 &1423176601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1423176594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1767901178
+      Data2: 1102382822
+      Data3: 472054448
+      Data4: 221187589
+    Path: event:/[Music] Battle Theme
+  Event: 
+  PlayEvent: 11
+  StopEvent: 12
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!114 &1564926164
 MonoBehaviour:
   m_ObjectHideFlags: 0

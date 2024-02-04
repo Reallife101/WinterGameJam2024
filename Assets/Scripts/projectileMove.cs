@@ -81,7 +81,6 @@ public class projectileMove : MonoBehaviour
         {
             FindObjectOfType<parryMode>().GetComponent<parryMode>().removeObject(this);
             Debug.Log("destroy 1");
-            Destroy(gameObject);
         }
 
         //handly parry image

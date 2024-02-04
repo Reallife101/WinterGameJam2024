@@ -108,6 +108,20 @@ MonoBehaviour:
   parryBar: {fileID: 0}
   maxTime: 7
   ani: {fileID: 1303111552525577135}
+  ShieldWorkieSFX:
+    Guid:
+      Data1: 728043239
+      Data2: 1148569484
+      Data3: -1681938539
+      Data4: 473467090
+    Path: event:/[SFX] PlayerForcefield
+  ShieldNoWorkieSFX:
+    Guid:
+      Data1: 184171064
+      Data2: 1237224878
+      Data3: 489060278
+      Data4: 1232426913
+    Path: event:/[SFX] Shield Non Trigger
 --- !u!58 &1303111552525577122
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -67,7 +67,7 @@ public class projectileMove : MonoBehaviour
     }
 
     // Update is called once per frame
-    protected void Update()
+    protected virtual void Update()
     {
         //transform.position = transform.position + transform.up * speed * Time.deltaTime;
         timer = timer + Time.deltaTime;
@@ -142,7 +142,7 @@ public class projectileMove : MonoBehaviour
         }
     }
 
-    private void onWallHit()
+    protected virtual void onWallHit()
     {
         if (!hasBeenParryed)
         {

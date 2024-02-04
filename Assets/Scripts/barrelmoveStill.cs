@@ -15,7 +15,7 @@ public class barrelmoveStill : barrelMove
 
     }
 
-    private void Update()
+    protected override void Update()
     {
         ani.SetFloat("speed", rb.velocity.magnitude);
         base.Update();
@@ -26,5 +26,10 @@ public class barrelmoveStill : barrelMove
         deactivateParry();
         hasBeenParryed = false;
         travelDistance = Mathf.Infinity;
+    }
+
+    protected override void onWallHit()
+    {
+        explode();
     }
 }

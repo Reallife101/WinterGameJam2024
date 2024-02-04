@@ -76,7 +76,6 @@ public class Boss : MonoBehaviour
         {
             direction = 1;
         }
-        if 
     }
 
     

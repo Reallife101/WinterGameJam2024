@@ -18,7 +18,7 @@ MonoBehaviour:
   pointsRequiredToNext: 5000
   pointMultiplier: 2.5
   nextTier: {fileID: 0}
-  prevTier: {fileID: 11400000, guid: b17bada8410f70c4a996fc2828563446, type: 2}
+  prevTier: {fileID: 11400000, guid: 1515e25f485147e49bf6fe263da55cc4, type: 2}
   cameraZoomAmount: 9.5
   bloomIntensity: 7
   chromaticAbberationIntensity: 1

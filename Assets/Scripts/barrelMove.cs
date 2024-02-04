@@ -21,11 +21,14 @@ public class barrelMove : projectileMove
     {
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, blastRadius);
 
+        Debug.Log(colliders.Length);
+
         foreach (Collider2D col in colliders)
         {
             health h = col.GetComponent<health>();
             if (h != null)
             {
+                Debug.Log("Killing: "+col.gameObject.name);
                 h.TakeDamage(3);
             }
         }

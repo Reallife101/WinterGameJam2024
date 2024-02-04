@@ -6,14 +6,20 @@ using UnityEngine;
 public class EnemyHealth : health
 {
     [SerializeField] private GameObject bubbleShield;
+    [SerializeField] private GameObject deathExplosion;
 
     public override void TakeDamage(int i = 1)
     {
         currentHealth-=i;
-        if (currentHealth == 0) { 
+        if (currentHealth <= 0) {
+            if (deathExplosion != null)
+            {
+                Instantiate(deathExplosion, transform.position, Quaternion.identity, transform.parent);
+
+            }
             Destroy(gameObject);
         }
-        else if (currentHealth == 1)
+        else if (currentHealth >= 1)
         {
             if (bubbleShield != null)
             {

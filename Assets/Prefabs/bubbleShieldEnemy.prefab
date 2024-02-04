@@ -30,7 +30,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 2860193957946146951}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3843747371272904110
 SpriteRenderer:
@@ -96,6 +96,18 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1004262805609164692, guid: d897e920b3cdf404caef81648ff2f74a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1004262805609164692, guid: d897e920b3cdf404caef81648ff2f74a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1004262805609164692, guid: d897e920b3cdf404caef81648ff2f74a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1004262805609164692, guid: d897e920b3cdf404caef81648ff2f74a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -135,10 +147,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4784540592454652069, guid: d897e920b3cdf404caef81648ff2f74a, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.912
+      objectReference: {fileID: 0}
     - target: {fileID: 5245259493963118350, guid: d897e920b3cdf404caef81648ff2f74a, type: 3}
       propertyPath: m_Name
       value: bubbleShieldEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 5690541380596807633, guid: d897e920b3cdf404caef81648ff2f74a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a3e31b6cd0ff04e48b385df09e03de4b, type: 3}
     - target: {fileID: 5957789526745634467, guid: d897e920b3cdf404caef81648ff2f74a, type: 3}
       propertyPath: maxHealth
       value: 2
@@ -147,6 +167,10 @@ PrefabInstance:
       propertyPath: bubbleShield
       value: 
       objectReference: {fileID: 6548836402826708455}
+    - target: {fileID: 8242629139246833801, guid: d897e920b3cdf404caef81648ff2f74a, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d897e920b3cdf404caef81648ff2f74a, type: 3}
 --- !u!4 &2860193957946146951 stripped

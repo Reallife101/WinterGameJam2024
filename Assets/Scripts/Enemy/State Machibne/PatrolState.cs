@@ -12,7 +12,7 @@ public class PatrolState : EnemyState
     }
     public override EnemyState OnUpdate()
     {
-        RaycastHit2D hit = Physics2D.Raycast(enemy.transform.position, enemy.transform.right, Mathf.Infinity, ~LayerMask.GetMask("ignoreEnemyRaycast"));
+        RaycastHit2D hit = Physics2D.Raycast(enemy.transform.position, enemy.transform.right, enemy.detectionRange, ~LayerMask.GetMask("ignoreEnemyRaycast"));
 
         Vector2 v = enemy.gameObject.transform.position - patrolPoints[patrolIndex].transform.position;
         if (v.magnitude < .01f)

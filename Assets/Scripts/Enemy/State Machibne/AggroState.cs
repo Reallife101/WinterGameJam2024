@@ -9,10 +9,11 @@ public class AggroState : EnemyState
     {
         enemy.toggleAggro(true);
         Debug.Log("Aggro Switch");
+        //enemy.SetDestination(enemy.transform.position);
     }
     public override EnemyState OnUpdate()
     {
-        RaycastHit2D hit = Physics2D.Raycast(enemy.transform.position, enemy.transform.right, Mathf.Infinity, ~LayerMask.GetMask("ignoreEnemyRaycast"));
+        RaycastHit2D hit = Physics2D.Raycast(enemy.transform.position, enemy.transform.right, enemy.detectionRange, ~LayerMask.GetMask("ignoreEnemyRaycast"));
 
         if (!hit || hit.collider.gameObject.tag != "Player")
         {

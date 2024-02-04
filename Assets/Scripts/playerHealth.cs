@@ -50,6 +50,7 @@ public class playerHealth : health
     public override void TakeDamage(int i =1)
     {
         StartCoroutine(invincibilityCoroutine());
+        bloodSplatter.instance.RefreshSplatter();
         PlayerHitEvent?.Invoke();
         currentHealth--;
         //FMODUnity.RuntimeManager.PlayOneShot(takeDamageSound);

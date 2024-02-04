@@ -19,7 +19,7 @@ MonoBehaviour:
   pointMultiplier: 1.5
   nextTier: {fileID: 11400000, guid: 4e5385eed44c4a94386a5f559038eb46, type: 2}
   prevTier: {fileID: 11400000, guid: 776305086b3c47f4cb4fbdd4705bb80f, type: 2}
-  cameraZoomAmount: 11
+  cameraZoomAmount: 8
   bloomIntensity: 2.5
   chromaticAbberationIntensity: 0.25
   vignetteIntensity: 0.35

@@ -17,6 +17,11 @@ public class AggroState : EnemyState
 
         if (!hit || hit.collider.gameObject.tag != "Player")
         {
+            if(enemy.PLAYER == null)
+            {
+                return base.OnUpdate();
+            }
+
             enemy.toggleAggro(false);
             nextState = new ChaseState(patrolPoints, enemy, patrolIndex, enemy.PLAYER.transform.position);
             return base.OnUpdate();

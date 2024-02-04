@@ -4059,8 +4059,28 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 766957145530784628}
     - target: {fileID: 1303111552525577123, guid: 837fde8f2ef771641a48081f153f4951, type: 3}
+      propertyPath: ShieldWorkieSFX.Path
+      value: event:/[SFX] PlayerForcefield
+      objectReference: {fileID: 0}
+    - target: {fileID: 1303111552525577123, guid: 837fde8f2ef771641a48081f153f4951, type: 3}
       propertyPath: ShieldNoWorkieSFX.Path
       value: event:/[SFX] Shield Non Trigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 1303111552525577123, guid: 837fde8f2ef771641a48081f153f4951, type: 3}
+      propertyPath: ShieldWorkieSFX.Guid.Data1
+      value: 728043239
+      objectReference: {fileID: 0}
+    - target: {fileID: 1303111552525577123, guid: 837fde8f2ef771641a48081f153f4951, type: 3}
+      propertyPath: ShieldWorkieSFX.Guid.Data2
+      value: 1148569484
+      objectReference: {fileID: 0}
+    - target: {fileID: 1303111552525577123, guid: 837fde8f2ef771641a48081f153f4951, type: 3}
+      propertyPath: ShieldWorkieSFX.Guid.Data3
+      value: -1681938539
+      objectReference: {fileID: 0}
+    - target: {fileID: 1303111552525577123, guid: 837fde8f2ef771641a48081f153f4951, type: 3}
+      propertyPath: ShieldWorkieSFX.Guid.Data4
+      value: 473467090
       objectReference: {fileID: 0}
     - target: {fileID: 1303111552525577123, guid: 837fde8f2ef771641a48081f153f4951, type: 3}
       propertyPath: ShieldNoWorkieSFX.Guid.Data1
@@ -4618,7 +4638,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1423176594}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
   m_Name: 

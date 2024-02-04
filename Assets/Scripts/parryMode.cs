@@ -18,6 +18,7 @@ public class parryMode : MonoBehaviour
     private List<projectileMove> parryObjects;
 
     // Audio Stuff
+    [SerializeField] FMODUnity.EventReference ShieldWorkieSFX;
     [SerializeField] FMODUnity.EventReference ShieldNoWorkieSFX;
 
     // Start is called before the first frame update
@@ -35,7 +36,8 @@ public class parryMode : MonoBehaviour
     void parryOn()
     {
         parryVisual.SetActive(true);
-        
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("ShieldOff", 0);
+        FMODUnity.RuntimeManager.PlayOneShot(ShieldWorkieSFX);
         isParrying = true;
         ani.SetBool("isParrying", true);
     }
@@ -46,6 +48,7 @@ public class parryMode : MonoBehaviour
         Time.timeScale = 10f;
         isParrying = false;
         ani.SetBool("isParrying", false);
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("ShieldOff", 1);
         FMODUnity.RuntimeManager.StudioSystem.setParameterByName("SlowDown", 0);
     }
 

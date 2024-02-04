@@ -5,6 +5,7 @@ using UnityEngine;
 public class playerHeartDisplay : MonoBehaviour
 {
     [SerializeField] List<GameObject> hearts;
+    [SerializeField] FMODUnity.EventReference TakeDamageSFX;
 
     int currentHeartCount;
 
@@ -33,6 +34,7 @@ public class playerHeartDisplay : MonoBehaviour
         {
             if (i>=currentHeartCount)
             {
+                FMODUnity.RuntimeManager.PlayOneShot(TakeDamageSFX);
                 hearts[i].SetActive(false);
             }
         }

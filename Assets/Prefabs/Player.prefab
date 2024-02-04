@@ -175,6 +175,14 @@ MonoBehaviour:
   moveSpeed: 1
   rb: {fileID: 1303111552525577132}
   ani: {fileID: 1303111552525577135}
+  FootstepSFX:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  footstepSpeed: 0.5
 --- !u!95 &1303111552525577135
 Animator:
   serializedVersion: 4

@@ -23,9 +23,6 @@
         },
         {
             "m_Id": "5bd77f33751841b08aaec48d0d33de92"
-        },
-        {
-            "m_Id": "724a2249f56d4aafb36da4fb30b68793"
         }
     ],
     "m_Keywords": [],
@@ -122,9 +119,6 @@
         },
         {
             "m_Id": "578b71dfcfbb47b391361948a61b7f55"
-        },
-        {
-            "m_Id": "23b950a0d2b44de4b6090d3f4db4dc92"
         }
     ],
     "m_GroupDatas": [],
@@ -168,20 +162,6 @@
             "m_InputSlot": {
                 "m_Node": {
                     "m_Id": "790e0d29c32b41b8ad9b8ee5eeda08f1"
-                },
-                "m_SlotId": 2
-            }
-        },
-        {
-            "m_OutputSlot": {
-                "m_Node": {
-                    "m_Id": "23b950a0d2b44de4b6090d3f4db4dc92"
-                },
-                "m_SlotId": 0
-            },
-            "m_InputSlot": {
-                "m_Node": {
-                    "m_Id": "93960615e3b74c90b953ced219f63f5b"
                 },
                 "m_SlotId": 2
             }
@@ -992,41 +972,6 @@
 
 {
     "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.PropertyNode",
-    "m_ObjectId": "23b950a0d2b44de4b6090d3f4db4dc92",
-    "m_Group": {
-        "m_Id": ""
-    },
-    "m_Name": "Property",
-    "m_DrawState": {
-        "m_Expanded": true,
-        "m_Position": {
-            "serializedVersion": "2",
-            "x": -804.7999877929688,
-            "y": -133.59999084472657,
-            "width": 125.60003662109375,
-            "height": 76.79998779296875
-        }
-    },
-    "m_Slots": [
-        {
-            "m_Id": "fd664bee749d46338b7eb7682757e65c"
-        }
-    ],
-    "synonyms": [],
-    "m_Precision": 0,
-    "m_PreviewExpanded": true,
-    "m_PreviewMode": 0,
-    "m_CustomColors": {
-        "m_SerializableColors": []
-    },
-    "m_Property": {
-        "m_Id": "724a2249f56d4aafb36da4fb30b68793"
-    }
-}
-
-{
-    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "2579d00a620c4d68856b08fa4102c510",
     "m_Id": 2,
@@ -1068,9 +1013,6 @@
         },
         {
             "m_Id": "5bd77f33751841b08aaec48d0d33de92"
-        },
-        {
-            "m_Id": "724a2249f56d4aafb36da4fb30b68793"
         }
     ]
 }
@@ -1643,7 +1585,7 @@
     "m_StageCapability": 3,
     "m_Value": {
         "x": 10.0,
-        "y": 40.0
+        "y": 30.0
     },
     "m_DefaultValue": {
         "x": 0.0,
@@ -2053,33 +1995,6 @@
     "m_ObjectId": "70302779356c4a1c8df8e41431751fbc",
     "m_Lit": false,
     "m_AlphaTest": true
-}
-
-{
-    "m_SGVersion": 1,
-    "m_Type": "UnityEditor.ShaderGraph.Internal.Vector1ShaderProperty",
-    "m_ObjectId": "724a2249f56d4aafb36da4fb30b68793",
-    "m_Guid": {
-        "m_GuidSerialized": "23234279-b014-4528-93da-9b19109803e1"
-    },
-    "m_Name": "Float",
-    "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "Float",
-    "m_DefaultReferenceName": "_Float",
-    "m_OverrideReferenceName": "",
-    "m_GeneratePropertyBlock": true,
-    "m_UseCustomSlotLabel": false,
-    "m_CustomSlotLabel": "",
-    "m_Precision": 0,
-    "overrideHLSLDeclaration": false,
-    "hlslDeclarationOverride": 0,
-    "m_Hidden": false,
-    "m_Value": 0.0,
-    "m_FloatType": 0,
-    "m_RangeValues": {
-        "x": 0.0,
-        "y": 1.0
-    }
 }
 
 {
@@ -2620,9 +2535,9 @@
         "m_Position": {
             "serializedVersion": "2",
             "x": -716.0,
-            "y": -196.00003051757813,
+            "y": -212.8000030517578,
             "width": 127.20001220703125,
-            "height": 100.80001068115235
+            "height": 100.79998779296875
         }
     },
     "m_Slots": [
@@ -3676,20 +3591,5 @@
         "z": 0.0,
         "w": 0.0
     }
-}
-
-{
-    "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
-    "m_ObjectId": "fd664bee749d46338b7eb7682757e65c",
-    "m_Id": 0,
-    "m_DisplayName": "Float",
-    "m_SlotType": 1,
-    "m_Hidden": false,
-    "m_ShaderOutputName": "Out",
-    "m_StageCapability": 3,
-    "m_Value": 0.0,
-    "m_DefaultValue": 0.0,
-    "m_Labels": []
 }
 

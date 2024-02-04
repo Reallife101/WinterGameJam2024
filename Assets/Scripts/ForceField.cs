@@ -5,7 +5,6 @@ using UnityEngine.VFX;
 
 public class ForceField : MonoBehaviour
 {
-    [SerializeField]
     private VisualEffect forceField;
     private float seconds;
     private bool inactive;

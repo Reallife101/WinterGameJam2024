@@ -6143,6 +6143,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &973465256 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1303111553543860012, guid: 837fde8f2ef771641a48081f153f4951, type: 3}
+  m_PrefabInstance: {fileID: 1999878575}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &973465260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 973465256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f3acd7e4d3030f48b75cc03cbe5a680, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  test: 0
+  pMode: {fileID: 1999878581}
 --- !u!1 &994981173
 GameObject:
   m_ObjectHideFlags: 0
@@ -7086,7 +7105,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1191505947
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7143,9 +7162,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de3302a3316f6f94fb71c0989220c978, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kill: {fileID: 1459155138}
-  them: {fileID: 262707687}
-  all: {fileID: 732408950}
+  marker: {fileID: 0}
+  three: {fileID: 0}
+  two: {fileID: 0}
+  one: {fileID: 0}
 --- !u!1001 &1300021808
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11489,9 +11509,25 @@ PrefabInstance:
       propertyPath: parryBar
       value: 
       objectReference: {fileID: 1037894796}
+    - target: {fileID: 1303111552525577123, guid: 837fde8f2ef771641a48081f153f4951, type: 3}
+      propertyPath: parryVFX
+      value: 
+      objectReference: {fileID: 973465256}
     - target: {fileID: 1303111552525577126, guid: 837fde8f2ef771641a48081f153f4951, type: 3}
       propertyPath: m_Name
       value: Player (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1303111553543860009, guid: 837fde8f2ef771641a48081f153f4951, type: 3}
+      propertyPath: m_PropertySheet.m_Bool.m_Array.Array.data[0].m_Value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1303111553543860012, guid: 837fde8f2ef771641a48081f153f4951, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1303111553543860014, guid: 837fde8f2ef771641a48081f153f4951, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 837fde8f2ef771641a48081f153f4951, type: 3}
@@ -11500,6 +11536,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1303111552525577120, guid: 837fde8f2ef771641a48081f153f4951, type: 3}
   m_PrefabInstance: {fileID: 1999878575}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1999878581 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1303111552525577123, guid: 837fde8f2ef771641a48081f153f4951, type: 3}
+  m_PrefabInstance: {fileID: 1999878575}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f945c7a8d453edf4eb4326cbda3facb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2047715023
 GameObject:
   m_ObjectHideFlags: 0
@@ -11559,6 +11606,13 @@ MonoBehaviour:
   - {fileID: 296040216}
   - {fileID: 232546105}
   - {fileID: 1817186666}
+  TakeDamageSFX:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!1 &2082710399
 GameObject:
   m_ObjectHideFlags: 0

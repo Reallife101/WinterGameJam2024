@@ -15,13 +15,15 @@ public class Cloud : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetAxisRaw("Vertical") < 0)
         {
             gO.transform.position = new Vector3(transform.position.x, transform.position.y, -3);
+            transform.position = new Vector3(transform.position.x, transform.position.y, 3);
         }
         else
         {
             gO.transform.position = new Vector3(transform.position.x, transform.position.y, 3);
+            transform.position = new Vector3(transform.position.x, transform.position.y, -3);
         }
     }
 }

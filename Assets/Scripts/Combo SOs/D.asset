@@ -17,7 +17,7 @@ MonoBehaviour:
   comboMeterColor: {r: 0, g: 0.37962723, b: 1, a: 1}
   pointsRequiredToNext: 625
   pointMultiplier: 1
-  nextTier: {fileID: 11400000, guid: a1d01abb1582ffb4484d77c1b8998c0f, type: 2}
+  nextTier: {fileID: 11400000, guid: 776305086b3c47f4cb4fbdd4705bb80f, type: 2}
   prevTier: {fileID: 0}
   cameraZoomAmount: 12
   bloomIntensity: 0

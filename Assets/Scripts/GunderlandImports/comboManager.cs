@@ -111,7 +111,7 @@ public class comboManager : MonoBehaviour
 
     private void UpdateUIElements()
     {
-        multiplierText.text = "Multiplier - " + currentTier.pointMultiplier.ToString() + "x";
+        multiplierText.text = currentTier.pointMultiplier.ToString() + "x";
         tierText.text = currentTier.letterGradeText;
         comboMeterBackground.color = currentTier.comboMeterColor;
         multiplierText.color = currentTier.comboMeterColor;

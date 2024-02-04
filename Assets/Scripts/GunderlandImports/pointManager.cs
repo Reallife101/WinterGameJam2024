@@ -28,7 +28,7 @@ public class pointManager : MonoBehaviour
         int pointsGained = (int)(points * comboManager.CM_Instance.currentMultiplier);
         totalPoints += pointsGained;
         comboManager.CM_Instance.GainComboPoints(pointsGained);
-        score.text = "Points: " + totalPoints;
+        score.text = totalPoints.ToString();
     }
 
     private void Update()

@@ -2142,5 +2142,9 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9080999904667227381, guid: dbc6cac6a302647479465888f659c046, type: 3}
+      propertyPath: m_NavMeshData
+      value: 
+      objectReference: {fileID: 23800000, guid: b62d45270c403884cb75f01110d648f2, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dbc6cac6a302647479465888f659c046, type: 3}

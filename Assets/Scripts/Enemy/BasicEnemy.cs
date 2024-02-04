@@ -31,6 +31,12 @@ public class BasicEnemy : MonoBehaviour
         player = GameObject.FindWithTag("Player");
     }
 
+    public void SetWaypoints(List<GameObject> _waypoints)
+    {
+        waypoints.Clear();
+        waypoints = _waypoints;
+    }
+
     public void toggleAggro(bool aggro)
     {
         aggroActive = aggro;

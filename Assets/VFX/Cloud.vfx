@@ -2391,7 +2391,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEditor.VFX.Vector, Unity.VisualEffectGraph.Editor,
           Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"vector":{"x":-2.0,"y":-0.30000001192092898,"z":-0.3330000042915344}}'
+      m_SerializableObject: '{"vector":{"x":-2.0,"y":-0.30000001192092898,"z":0.0}}'
     m_Space: 0
   m_Property:
     name: A
@@ -2561,7 +2561,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEditor.VFX.Vector, Unity.VisualEffectGraph.Editor,
           Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"vector":{"x":2.0,"y":0.30000001192092898,"z":0.3330000042915344}}'
+      m_SerializableObject: '{"vector":{"x":2.0,"y":0.30000001192092898,"z":0.0}}'
     m_Space: 0
   m_Property:
     name: B

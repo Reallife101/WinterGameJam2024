@@ -36,6 +36,7 @@ public class parryMode : MonoBehaviour
     void parryOn()
     {
         parryVisual.SetActive(true);
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("shieldEmpty", 0);
         FMODUnity.RuntimeManager.StudioSystem.setParameterByName("ShieldOff", 0);
         FMODUnity.RuntimeManager.PlayOneShot(ShieldWorkieSFX);
         isParrying = true;
@@ -102,6 +103,7 @@ public class parryMode : MonoBehaviour
             //if it hits bottom, go to recovery
             if (currentTime <=0)
             {
+                FMODUnity.RuntimeManager.StudioSystem.setParameterByName("shieldEmpty", 1);
                 parryBar.isRecovering = true;
                 parryOff();
             }

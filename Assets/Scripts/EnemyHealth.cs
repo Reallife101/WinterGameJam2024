@@ -7,9 +7,9 @@ public class EnemyHealth : health
 {
     [SerializeField] private GameObject bubbleShield;
 
-    public override void TakeDamage()
+    public override void TakeDamage(int i = 1)
     {
-        --currentHealth;
+        currentHealth-=i;
         if (currentHealth == 0) { 
             Destroy(gameObject);
         }

@@ -4,10 +4,27 @@ using UnityEngine;
 
 public class barrelMove : projectileMove
 {
-    protected override void Start()
+    [SerializeField] float blastRadius;
+
+    protected virtual void OnCollisionEnter2D(Collision2D collision)
     {
-        deactivateParry();
-        hasBeenParryed = false;
-        travelDistance = Mathf.Infinity;
+        explode();
+
+    }
+
+    protected void explode()
+    {
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, blastRadius);
+
+        foreach (Collider2D col in colliders)
+        {
+            health h = col.GetComponent<health>();
+            if (h != null)
+            {
+                h.TakeDamage(3);
+            }
+        }
+
+        FindObjectOfType<parryMode>().GetComponent<parryMode>().removeObject(this);
     }
 }

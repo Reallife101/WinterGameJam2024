@@ -38,7 +38,7 @@ public abstract class health : MonoBehaviour
         }
     }
 
-    public abstract void TakeDamage();
+    public abstract void TakeDamage(int i = 1);
 
     private void Heal()
     {

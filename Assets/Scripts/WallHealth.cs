@@ -6,9 +6,9 @@ using UnityEngine;
 public class WallHealth : health
 {
 
-    public override void TakeDamage()
+    public override void TakeDamage(int i)
     {
-        --currentHealth;
+        currentHealth-=i;
         if (currentHealth == 0)
         {
             Destroy(gameObject);

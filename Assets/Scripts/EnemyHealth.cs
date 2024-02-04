@@ -11,7 +11,7 @@ public class EnemyHealth : health
     public override void TakeDamage(int i = 1)
     {
         currentHealth-=i;
-        if (currentHealth == 0) {
+        if (currentHealth <= 0) {
             if (deathExplosion != null)
             {
                 Instantiate(deathExplosion, transform.position, Quaternion.identity, transform.parent);
@@ -19,7 +19,7 @@ public class EnemyHealth : health
             }
             Destroy(gameObject);
         }
-        else if (currentHealth == 1)
+        else if (currentHealth >= 1)
         {
             if (bubbleShield != null)
             {

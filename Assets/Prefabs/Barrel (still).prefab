@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 671080087283281692}
   - component: {fileID: 6209901796870865946}
   - component: {fileID: 3822886648124764917}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Barrel (still)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -206,7 +206,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 671080087959905187}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ShootUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -239,7 +239,7 @@ GameObject:
   m_Component:
   - component: {fileID: 671080088457444656}
   - component: {fileID: 671080088457444657}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -324,13 +324,29 @@ PrefabInstance:
       propertyPath: m_Intensity
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7684677543225702287, guid: b7492e94e1e86134f92fdbdc1c0ac0c2, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8764043878647920493, guid: b7492e94e1e86134f92fdbdc1c0ac0c2, type: 3}
       propertyPath: m_Name
       value: FireBrearh
       objectReference: {fileID: 0}
     - target: {fileID: 8764043878647920493, guid: b7492e94e1e86134f92fdbdc1c0ac0c2, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8764043878647920493, guid: b7492e94e1e86134f92fdbdc1c0ac0c2, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8764373218812076563, guid: b7492e94e1e86134f92fdbdc1c0ac0c2, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8764473058345964675, guid: b7492e94e1e86134f92fdbdc1c0ac0c2, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8767152486562788127, guid: b7492e94e1e86134f92fdbdc1c0ac0c2, type: 3}
       propertyPath: m_RootOrder

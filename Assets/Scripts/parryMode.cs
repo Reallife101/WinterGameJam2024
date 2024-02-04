@@ -17,6 +17,9 @@ public class parryMode : MonoBehaviour
 
     private List<projectileMove> parryObjects;
 
+    // Audio Stuff
+    [SerializeField] FMODUnity.EventReference ShieldNoWorkieSFX;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -53,6 +56,10 @@ public class parryMode : MonoBehaviour
         {
             parryOn();
         }
+        else if (Input.GetKeyDown(KeyCode.Space) && parryBar.isRecovering)
+        {
+            FMODUnity.RuntimeManager.PlayOneShot(ShieldNoWorkieSFX);
+        }
 
         if (Input.GetKeyUp(KeyCode.Space))
         {
@@ -66,11 +73,13 @@ public class parryMode : MonoBehaviour
             {
                 Time.timeScale = 1f;
                 parryObjects[0].ActivateParry();
+                FMODUnity.RuntimeManager.StudioSystem.setParameterByName("SlowDown", 1);
             }
             else
             {
                 Time.timeScale = 10f;
                 parryObjects[0].deactivateParry();
+                FMODUnity.RuntimeManager.StudioSystem.setParameterByName("SlowDown", 0);
             }
             
         }

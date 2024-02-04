@@ -6,13 +6,13 @@ public class barrelMove : projectileMove
 {
     [SerializeField] float blastRadius;
     [SerializeField] GameObject explosion;
-    [SerializeField] FMODUnity.EventReference explodeSFX;
+    [SerializeField] FMODUnity.EventReference explodeSFX2;
 
 
 
     protected virtual void OnCollisionEnter2D(Collision2D collision)
     {
-        FMODUnity.RuntimeManager.PlayOneShot(explodeSFX);
+        FMODUnity.RuntimeManager.PlayOneShot(explodeSFX2);
         explode();
 
     }

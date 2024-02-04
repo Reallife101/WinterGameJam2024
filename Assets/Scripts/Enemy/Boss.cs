@@ -10,6 +10,7 @@ public class Boss : MonoBehaviour
     [SerializeField] private GameObject leftPatrolPoint;
     [SerializeField] private GameObject rightPatrolPoint;
     [SerializeField] private float moveSpeed;
+    [SerializeField] private float shieldSpinRate;
     private int direction;
 
     [Header("Spray Attack")]
@@ -41,6 +42,7 @@ public class Boss : MonoBehaviour
 
     [Header("refs")]
     [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private GameObject shield;
 
 
     private List<Action> attacks = new List<Action>();
@@ -49,9 +51,9 @@ public class Boss : MonoBehaviour
 
     private void Awake()
     {
-        attacks.Add(barrelAttack);
-        attacks.Add(spawnMinions);
         attacks.Add(sprayAttack);
+        attacks.Add(spawnMinions);
+        attacks.Add(barrelAttack);
         player = GameObject.FindWithTag("Player");
         direction = 1;
         phase = 0;
@@ -76,6 +78,7 @@ public class Boss : MonoBehaviour
         {
             direction = 1;
         }
+        shield.transform.Rotate(0, 0, shieldSpinRate);
     }
 
     
@@ -84,7 +87,8 @@ public class Boss : MonoBehaviour
     {
         List<int> choices = new List<int> { 0, 1, 2 };
         choices.Remove(dontInclude);
-        attacks[UnityEngine.Random.Range(0, choices.Count)].Invoke();
+        Debug.Log(choices.Count);
+        attacks[choices[UnityEngine.Random.Range(0, choices.Count)]].Invoke();
     }
 
     private void barrelAttack()

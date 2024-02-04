@@ -16,6 +16,12 @@ public class winScreen : MonoBehaviour
         SceneManager.LoadScene(nextSceneIndex);
     }
 
+    public void retry()
+    {
+        // Load the next scene
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
     public void quit()
     {
         Application.Quit();

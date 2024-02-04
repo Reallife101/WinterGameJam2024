@@ -6,7 +6,14 @@ public class killThemAll : MonoBehaviour
 {
 
     [SerializeField] GameObject win;
-    
+    [SerializeField] GameObject lose;
+
+    private void Start()
+    {
+        win.SetActive(false);
+        lose.SetActive(false);
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -16,6 +23,10 @@ public class killThemAll : MonoBehaviour
         {
             Time.timeScale = 0f;
             win.SetActive(true);
+        } else if (GameObject.FindGameObjectWithTag("Player") == null)
+        {
+            Time.timeScale = 0f;
+            lose.SetActive(true);
         }
     }
 }

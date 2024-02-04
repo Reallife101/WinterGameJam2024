@@ -16,7 +16,7 @@ public class topDownMovement : MonoBehaviour
         movement.y = Input.GetAxisRaw("Vertical");
 
         movement.Normalize();
-        rb.velocity = movement*moveSpeed*Time.deltaTime;
+        rb.velocity = movement*moveSpeed;
 
         ani.SetFloat("Horizontal", movement.x);
         ani.SetFloat("Vertical", movement.y);

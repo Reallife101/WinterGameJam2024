@@ -9,8 +9,12 @@ public class BasicEnemy : MonoBehaviour
     [SerializeField] private GameObject bullet;
     [SerializeField] private float bulletOffset;
     [SerializeField] private float shootDelay;
+    [SerializeField] private float burstDelay;
+    [SerializeField] private int burstSize;
     [SerializeField] NavMeshAgent agent;
     private float shootTimer;
+    private float burstTimer;
+    private int burstNumber;
     private GameObject player;
     private bool aggroActive = false;
 
@@ -51,18 +55,31 @@ public class BasicEnemy : MonoBehaviour
     {
         if(!aggroActive) { return; }
 
-        if (shootTimer <= 0)
+        if (burstNumber >= burstSize)
         {
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.right, Mathf.Infinity, ~LayerMask.GetMask("ignoreEnemyRaycast"));
-
-            if (hit && hit.collider.gameObject.tag.Equals("Player"))
+            burstTimer = burstDelay;
+            burstNumber = 0;
+        }
+        else if (burstTimer < 0)
+        {
+            if (shootTimer <= 0)
             {
-                shoot();
+                RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.right, Mathf.Infinity, ~LayerMask.GetMask("ignoreEnemyRaycast"));
+
+                if (hit && hit.collider.gameObject.tag.Equals("Player"))
+                {
+                    shoot();
+                }
             }
+            else
+            {
+                shootTimer -= Time.deltaTime;
+            }
+
         }
         else
         {
-            shootTimer -= Time.deltaTime;
+            burstTimer -= Time.deltaTime;
         }
     }
 
@@ -80,5 +97,6 @@ public class BasicEnemy : MonoBehaviour
     {
         Instantiate(bullet, transform.position + transform.right * bulletOffset, transform.rotation*Quaternion.Euler(0f, 0f,-90f));
         shootTimer = shootDelay;
+        burstNumber++;
     }
 }

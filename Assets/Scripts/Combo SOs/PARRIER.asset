@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0040dbdbd3f094348b7745aa51c2325e, type: 3}
-  m_Name: ISEKAI
+  m_Name: PARRIER
   m_EditorClassIdentifier: 
   letterGradeSprite: {fileID: 0}
-  letterGradeText: GUNDERLAND
-  comboMeterColor: {r: 0.990566, g: 0.9674595, b: 0.006229852, a: 1}
+  letterGradeText: PARRIER
+  comboMeterColor: {r: 1, g: 0.7921569, b: 0.3764706, a: 1}
   pointsRequiredToNext: 5000
   pointMultiplier: 2.5
   nextTier: {fileID: 0}

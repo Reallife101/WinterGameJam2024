@@ -78,7 +78,7 @@ VisualEffect:
       m_Array:
       - m_Value:
           serializedVersion: 2
-          key0: {r: 1.1607844, g: 0.40784314, b: 2.4156864, a: 0}
+          key0: {r: 2.1803923, g: 1.3960785, b: 0.21960784, a: 0}
           key1: {r: 0.5, g: 0.5, b: 0.5, a: 1}
           key2: {r: 0.5, g: 0.5, b: 0.5, a: 0.8}
           key3: {r: 0, g: 0, b: 0, a: 0}

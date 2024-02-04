@@ -1343,6 +1343,13 @@ MonoBehaviour:
   - {fileID: 858844954}
   - {fileID: 615209345}
   - {fileID: 722417170}
+  TakeDamageSFX:
+    Guid:
+      Data1: -1701209674
+      Data2: 1151688790
+      Data3: 1116458149
+      Data4: -1062091391
+    Path: event:/[SFX] Take Damage
 --- !u!1001 &580501693
 PrefabInstance:
   m_ObjectHideFlags: 0

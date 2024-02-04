@@ -138,7 +138,7 @@ MonoBehaviour:
   destroytime: 100
   hasBeenParryed: 0
   rb: {fileID: 4147209616268158429}
-  speed: 0.3
+  speed: 0.6
   maxBounces: 2
   ui: {fileID: 4147209615783096263}
 --- !u!58 &4147209616268158428

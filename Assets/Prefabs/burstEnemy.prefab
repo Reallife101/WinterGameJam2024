@@ -67,5 +67,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: burstEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 5690541380596807633, guid: d897e920b3cdf404caef81648ff2f74a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: eb8eaf5790127624a94358562b03c6f3, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d897e920b3cdf404caef81648ff2f74a, type: 3}

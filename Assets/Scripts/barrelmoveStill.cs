@@ -5,13 +5,13 @@ using UnityEngine;
 public class barrelmoveStill : barrelMove
 {
     [SerializeField] Animator ani;
-    [SerializeField] FMODUnity.EventReference explodeSFX;
+    [SerializeField] FMODUnity.EventReference explodeSFX1;
 
     protected override void OnCollisionEnter2D(Collision2D collision)
     {
         if (hasBeenParryed || collision.gameObject.tag == "hurt")
         {
-            FMODUnity.RuntimeManager.PlayOneShot(explodeSFX);
+            FMODUnity.RuntimeManager.PlayOneShot(explodeSFX1);
             explode();
         }
 
@@ -32,7 +32,7 @@ public class barrelmoveStill : barrelMove
 
     protected override void onWallHit()
     {
-        FMODUnity.RuntimeManager.PlayOneShot(explodeSFX);
+        FMODUnity.RuntimeManager.PlayOneShot(explodeSFX1);
         explode();
     }
 }

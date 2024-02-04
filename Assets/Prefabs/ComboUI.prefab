@@ -608,14 +608,14 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: 2038541778
-      Data2: 1168995610
-      Data3: 1429444485
-      Data4: 989937522
-    Path: event:/UI SFX/G
+      Data1: -503366399
+      Data2: 1304697019
+      Data3: -166692477
+      Data4: -470205793
+    Path: event:/[UI] E
   Event: 
   PlayEvent: 11
-  StopEvent: 12
+  StopEvent: 0
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0

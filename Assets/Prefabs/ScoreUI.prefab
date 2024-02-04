@@ -129,11 +129,11 @@ MonoBehaviour:
   transitionDuration: 0.5
   derankSound:
     Guid:
-      Data1: -2120345595
-      Data2: 1176276121
-      Data3: -1296231251
-      Data4: 537343565
-    Path: event:/UI SFX/DeRank
+      Data1: 834108247
+      Data2: 1271631064
+      Data3: 1911476913
+      Data4: -746329874
+    Path: event:/[UI] Derank
   PV: {fileID: 0}
 --- !u!114 &3347686161295238573
 MonoBehaviour:

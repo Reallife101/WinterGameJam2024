@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -42,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 2000
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -63,6 +64,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
   cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
@@ -75,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -87,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -99,347 +103,12 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: HOWMANYBRICKS_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 6000
-        width: 2000
-        height: 2000
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c0f228e68da49824f9bc326d91b0a1f8
-      internalID: -1070179210
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HOWMANYBRICKS_1
-      rect:
-        serializedVersion: 2
-        x: 2000
-        y: 6000
-        width: 2000
-        height: 2000
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c5fbf4a9d8ef10144b603948b0a61667
-      internalID: -154327218
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HOWMANYBRICKS_2
-      rect:
-        serializedVersion: 2
-        x: 4000
-        y: 6000
-        width: 2000
-        height: 2000
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a2dd9c72110045945943a1c7de52d08b
-      internalID: -1556684937
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HOWMANYBRICKS_3
-      rect:
-        serializedVersion: 2
-        x: 6000
-        y: 6000
-        width: 2000
-        height: 2000
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1c4baf86369b9934baec63dc4b807fa6
-      internalID: -2116313107
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HOWMANYBRICKS_4
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 4000
-        width: 2000
-        height: 2000
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4010ae243005067439c57bc578b5e755
-      internalID: -1750534785
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HOWMANYBRICKS_5
-      rect:
-        serializedVersion: 2
-        x: 2000
-        y: 4000
-        width: 2000
-        height: 2000
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 87d7ea66c1b31cd4486aa4f4e11e947a
-      internalID: 1685060078
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HOWMANYBRICKS_6
-      rect:
-        serializedVersion: 2
-        x: 4000
-        y: 4000
-        width: 2000
-        height: 2000
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 87be63be7ca1cc84e9e7b8ef3a27eb2a
-      internalID: -290955318
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HOWMANYBRICKS_7
-      rect:
-        serializedVersion: 2
-        x: 6000
-        y: 4000
-        width: 2000
-        height: 2000
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a5f1eedba3f9762499a43c47a8564b7e
-      internalID: -1241785129
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HOWMANYBRICKS_8
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 2000
-        width: 2000
-        height: 2000
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 071ce40dfc0009941bfd8c7b3efd6947
-      internalID: 1613604025
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HOWMANYBRICKS_9
-      rect:
-        serializedVersion: 2
-        x: 2000
-        y: 2000
-        width: 2000
-        height: 2000
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ac537f84fe04f864fb2b62fa4c700efe
-      internalID: -1384616262
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HOWMANYBRICKS_10
-      rect:
-        serializedVersion: 2
-        x: 4000
-        y: 2000
-        width: 2000
-        height: 2000
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1f8a6c53ecfb5474fa27cb2435039f30
-      internalID: -1768892725
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HOWMANYBRICKS_11
-      rect:
-        serializedVersion: 2
-        x: 6000
-        y: 2000
-        width: 2000
-        height: 2000
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 729f2e161d0956744919edbdff92fa76
-      internalID: 1820986689
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HOWMANYBRICKS_12
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 2000
-        height: 2000
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 60de08e010a340e4d998d64c4611059a
-      internalID: -825447198
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HOWMANYBRICKS_13
-      rect:
-        serializedVersion: 2
-        x: 2000
-        y: 0
-        width: 2000
-        height: 2000
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 36f4a88fe5e9e2e4285aa90dee7665ce
-      internalID: 185592373
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HOWMANYBRICKS_14
-      rect:
-        serializedVersion: 2
-        x: 4000
-        y: 0
-        width: 2000
-        height: 2000
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 101a892cd34098e44aa16f8f6a6c83fb
-      internalID: 18599138
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HOWMANYBRICKS_15
-      rect:
-        serializedVersion: 2
-        x: 6000
-        y: 0
-        width: 2000
-        height: 2000
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0e68f048f376fc943bc54fe6f22e9270
-      internalID: -1452388785
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -450,26 +119,9 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      HOWMANYBRICKS_0: -1070179210
-      HOWMANYBRICKS_2: -1556684937
-      HOWMANYBRICKS_12: -825447198
-      HOWMANYBRICKS_13: 185592373
-      HOWMANYBRICKS_5: 1685060078
-      HOWMANYBRICKS_3: -2116313107
-      HOWMANYBRICKS_9: -1384616262
-      HOWMANYBRICKS_7: -1241785129
-      HOWMANYBRICKS_4: -1750534785
-      HOWMANYBRICKS_11: 1820986689
-      HOWMANYBRICKS_14: 18599138
-      HOWMANYBRICKS_1: -154327218
-      HOWMANYBRICKS_8: 1613604025
-      HOWMANYBRICKS_15: -1452388785
-      HOWMANYBRICKS_6: -290955318
-      HOWMANYBRICKS_10: -1768892725
-  spritePackingTag: 
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

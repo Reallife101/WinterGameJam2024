@@ -4130,8 +4130,16 @@ PrefabInstance:
       value: Player (1)
       objectReference: {fileID: 0}
     - target: {fileID: 1303111552525577133, guid: 837fde8f2ef771641a48081f153f4951, type: 3}
+      propertyPath: footstepSpeed
+      value: 0.003
+      objectReference: {fileID: 0}
+    - target: {fileID: 1303111552525577133, guid: 837fde8f2ef771641a48081f153f4951, type: 3}
       propertyPath: FootstepSFX.Path
       value: event:/[SFX] Footsteps
+      objectReference: {fileID: 0}
+    - target: {fileID: 1303111552525577133, guid: 837fde8f2ef771641a48081f153f4951, type: 3}
+      propertyPath: footstepSFXSpeed
+      value: 0.003
       objectReference: {fileID: 0}
     - target: {fileID: 1303111552525577133, guid: 837fde8f2ef771641a48081f153f4951, type: 3}
       propertyPath: FootstepSFX.Guid.Data1

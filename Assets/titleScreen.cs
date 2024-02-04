@@ -12,6 +12,7 @@ public class titleScreen : MonoBehaviour
     private void Start()
     {
         mmOpen();
+        Time.timeScale = 1f;
     }
 
     public void loadNextScene()

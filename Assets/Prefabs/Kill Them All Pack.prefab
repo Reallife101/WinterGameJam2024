@@ -7718,7 +7718,7 @@ MonoBehaviour:
   tierText: {fileID: 9080999904115906683}
   multiplierText: {fileID: 9080999905417218197}
   comboMeterBackground: {fileID: 9080999904321888525}
-  comboDecayPercentagePerSecond: 0.1
+  comboDecayPercentagePerSecond: 0.01
   transitionDuration: 0.5
   derankSound:
     Guid:

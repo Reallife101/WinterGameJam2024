@@ -5798,11 +5798,11 @@ MonoBehaviour:
   - {fileID: 5609738071183676119}
   TakeDamageSFX:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -1701209674
+      Data2: 1151688790
+      Data3: 1116458149
+      Data4: -1062091391
+    Path: event:/[SFX] Take Damage
 --- !u!1 &5609738070897252134
 GameObject:
   m_ObjectHideFlags: 0

@@ -152,11 +152,11 @@ MonoBehaviour:
     Path: event:/[SFX] Deflect
   ricoSFX:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -789284213
+      Data2: 1085392950
+      Data3: 504249006
+      Data4: 454840072
+    Path: event:/[SFX] Ricochet
 --- !u!58 &4147209616268158428
 CircleCollider2D:
   m_ObjectHideFlags: 0

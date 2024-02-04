@@ -146,6 +146,7 @@ public class projectileMove : MonoBehaviour
         if (velocity.magnitude >= 0.001f && nextWallHit)
         {
             travelDistance = nextWallHit.distance;
+            FMODUnity.RuntimeManager.PlayOneShot(ricoSFX);
         }
         else
         {

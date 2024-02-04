@@ -50,4 +50,9 @@ public abstract class health : MonoBehaviour
         return currentHealth;
     }
 
+    public int getMaxHealth()
+    {
+        return maxHealth;
+    }
+
 }

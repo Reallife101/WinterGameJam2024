@@ -82,7 +82,7 @@ public class parryMode : MonoBehaviour
             }
             else
             {
-                Time.timeScale = 10f;
+                //Time.timeScale = 10f;
                 parryObjects[0].deactivateParry();
             }
             

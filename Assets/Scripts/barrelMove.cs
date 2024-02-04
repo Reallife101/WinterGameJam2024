@@ -25,7 +25,6 @@ public class barrelMove : projectileMove
 
         foreach (Collider2D col in colliders)
         {
-            Debug.Log(col.gameObject.name);
             health h = col.GetComponent<health>();
             if (h != null)
             {

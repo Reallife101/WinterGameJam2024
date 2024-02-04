@@ -506,7 +506,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 3
   hurtTag: hurt
-  invulTime: 1.5
+  invulTime: 15
 --- !u!1 &8753387947336513014
 GameObject:
   m_ObjectHideFlags: 0

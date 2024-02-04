@@ -167,7 +167,7 @@ MonoBehaviour:
   maxBounces: 2
   ui: {fileID: 671080087959905186}
   blastRadius: 5
-  explosion: {fileID: 1134129239631916, guid: 6145096fe78596440a6ad2f31373192c, type: 3}
+  explosion: {fileID: 3056570002468307942, guid: 122a34ee43d27d94a882ea2fd09ba145, type: 3}
   ani: {fileID: 6209901796870865946}
 --- !u!1 &671080087959905186
 GameObject:

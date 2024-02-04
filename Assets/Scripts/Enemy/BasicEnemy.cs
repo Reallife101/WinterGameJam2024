@@ -11,6 +11,7 @@ public class BasicEnemy : MonoBehaviour
     [SerializeField] private float burstDelay;
     [SerializeField] private int burstSize;
     [SerializeField] NavMeshAgent agent;
+    [SerializeField] private int pointValue = 300;
     private float shootTimer;
     private float burstTimer;
     private int burstNumber;
@@ -94,5 +95,10 @@ public class BasicEnemy : MonoBehaviour
         Instantiate(bullet, transform.position + transform.right * bulletOffset, transform.rotation*Quaternion.Euler(0f, 0f,-90f));
         shootTimer = shootDelay;
         burstNumber++;
+    }
+
+    private void OnDestroy()
+    {
+        pointManager.PM_Instance.GainPoint(pointValue);
     }
 }

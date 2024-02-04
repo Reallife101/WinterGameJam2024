@@ -17,8 +17,8 @@ MonoBehaviour:
   comboMeterColor: {r: 0.8962264, g: 0.19132188, b: 0.17473589, a: 1}
   pointsRequiredToNext: 3750
   pointMultiplier: 2
-  nextTier: {fileID: 11400000, guid: 8f3b7678ddcb4a348a81287d598b55a7, type: 2}
-  prevTier: {fileID: 11400000, guid: bb908a1f6f4ca904f8d7605ca37f8b74, type: 2}
+  nextTier: {fileID: 11400000, guid: 346463b42d3246d4bbb2f2801450cead, type: 2}
+  prevTier: {fileID: 11400000, guid: 4e5385eed44c4a94386a5f559038eb46, type: 2}
   cameraZoomAmount: 10
   bloomIntensity: 4.5
   chromaticAbberationIntensity: 0.7

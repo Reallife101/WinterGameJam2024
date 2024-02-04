@@ -35,7 +35,7 @@ public class pointManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Tab))
         {
-            GainPoint(100);
+            GainPoint(1000);
         }
     }
 }

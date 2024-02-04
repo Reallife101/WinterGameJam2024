@@ -232,6 +232,7 @@ MonoBehaviour:
   burstDelay: 8
   burstSize: 1
   agent: {fileID: 1337095344592272117}
+  pointValue: 300
   detectionRange: 100000
   waypoints:
   - {fileID: 5245259493963118350}

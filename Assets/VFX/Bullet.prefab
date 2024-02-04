@@ -50,7 +50,7 @@ VisualEffect:
   m_PropertySheet:
     m_Float:
       m_Array:
-      - m_Value: 75
+      - m_Value: 3
         m_Name: Bullet Lifetime
         m_Overridden: 1
     m_Vector2f:
@@ -71,8 +71,8 @@ VisualEffect:
           serializedVersion: 2
           m_Curve:
           - serializedVersion: 3
-            time: -0.014465332
-            value: 0.6808128
+            time: 0.007018313
+            value: 0.9983991
             inSlope: 0
             outSlope: 0
             tangentMode: 0
@@ -80,8 +80,8 @@ VisualEffect:
             inWeight: 0
             outWeight: 0
           - serializedVersion: 3
-            time: 0.014538839
-            value: 0.73504245
+            time: 0.04414779
+            value: 0.99820065
             inSlope: 0.4701916
             outSlope: 0.4701916
             tangentMode: 0
@@ -89,8 +89,8 @@ VisualEffect:
             inWeight: 0.7582932
             outWeight: 0.21261808
           - serializedVersion: 3
-            time: 0.22492589
-            value: 0.84582156
+            time: 0.48805624
+            value: 0.9473981
             inSlope: -0.2751049
             outSlope: -0.2751049
             tangentMode: 0
@@ -98,22 +98,13 @@ VisualEffect:
             inWeight: 0.33333334
             outWeight: 0.33333334
           - serializedVersion: 3
-            time: 0.26917094
-            value: 0.8252458
+            time: 0.5323013
+            value: 0.92682236
             inSlope: -1.4268763
             outSlope: -1.4268763
             tangentMode: 0
             weightedMode: 0
             inWeight: 0.33333334
-            outWeight: 0.33333334
-          - serializedVersion: 3
-            time: 0.7360424
-            value: 0.20173497
-            inSlope: -1.3366551
-            outSlope: -1.3366551
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 1
             outWeight: 0.33333334
           - serializedVersion: 3
             time: 1

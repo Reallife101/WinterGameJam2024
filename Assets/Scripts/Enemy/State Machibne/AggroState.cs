@@ -13,7 +13,7 @@ public class AggroState : EnemyState
     }
     public override EnemyState OnUpdate()
     {
-        RaycastHit2D hit = Physics2D.Raycast(enemy.transform.position, enemy.transform.right, enemy.detectionRange, ~LayerMask.GetMask("ignoreEnemyRaycast"));
+        RaycastHit2D hit = Physics2D.Raycast(enemy.transform.position, enemy.transform.right, enemy.detectionRange, ~LayerMask.GetMask("ignoreEnemyRaycast", "Hole"));
 
         if (!hit || hit.collider.gameObject.tag != "Player")
         {

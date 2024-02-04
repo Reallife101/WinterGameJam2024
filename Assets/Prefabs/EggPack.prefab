@@ -5127,6 +5127,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5609738070618881923}
   - component: {fileID: 5609738070618881920}
+  - component: {fileID: 4311534902055590379}
   m_Layer: 0
   m_Name: CM vcam1
   m_TagString: Untagged
@@ -5188,6 +5189,18 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 5609738071150358234}
+--- !u!114 &4311534902055590379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5609738070618881921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 012483b9e671f3c4fa570bfeb439b6ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5609738070622411908
 GameObject:
   m_ObjectHideFlags: 0
@@ -6553,7 +6566,6 @@ GameObject:
   - component: {fileID: 5609738071248152279}
   - component: {fileID: 5609738071248152276}
   - component: {fileID: 5609738071248152277}
-  - component: {fileID: 7483986563895180423}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -6711,18 +6723,6 @@ MonoBehaviour:
   blendDistance: 0
   weight: 1
   sharedProfile: {fileID: 11400000, guid: f7d8757b5a417144b8adc561c4c9d9bb, type: 2}
---- !u!114 &7483986563895180423
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5609738071248152282}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 012483b9e671f3c4fa570bfeb439b6ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &5609738071254233622
 GameObject:
   m_ObjectHideFlags: 0

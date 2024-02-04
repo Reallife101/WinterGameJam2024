@@ -143,6 +143,20 @@ MonoBehaviour:
   speed: 0.6
   maxBounces: 2
   ui: {fileID: 4147209615783096263}
+  parrySFX:
+    Guid:
+      Data1: 1656777163
+      Data2: 1288097712
+      Data3: 492789909
+      Data4: 1876845955
+    Path: event:/[SFX] Deflect
+  ricoSFX:
+    Guid:
+      Data1: -789284213
+      Data2: 1085392950
+      Data3: 504249006
+      Data4: 454840072
+    Path: event:/[SFX] Ricochet
 --- !u!58 &4147209616268158428
 CircleCollider2D:
   m_ObjectHideFlags: 0

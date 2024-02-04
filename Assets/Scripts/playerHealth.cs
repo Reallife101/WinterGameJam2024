@@ -47,7 +47,7 @@ public class playerHealth : health
         }
     }
 
-    public override void TakeDamage()
+    public override void TakeDamage(int i =1)
     {
         StartCoroutine(invincibilityCoroutine());
         PlayerHitEvent?.Invoke();

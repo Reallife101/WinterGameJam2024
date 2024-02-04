@@ -11,6 +11,8 @@ public class parryMode : MonoBehaviour
     [SerializeField] healthBar parryBar;
     [SerializeField] float maxTime;
 
+    [SerializeField] Animator ani;
+
     private float currentTime;
 
     private List<projectileMove> parryObjects;
@@ -30,8 +32,9 @@ public class parryMode : MonoBehaviour
     void parryOn()
     {
         parryVisual.SetActive(true);
-        Time.timeScale = 1f;
+        
         isParrying = true;
+        ani.SetBool("isParrying", true);
     }
 
     void parryOff()
@@ -39,6 +42,7 @@ public class parryMode : MonoBehaviour
         parryVisual.SetActive(false);
         Time.timeScale = 10f;
         isParrying = false;
+        ani.SetBool("isParrying", false);
     }
 
     // Update is called once per frame
@@ -47,7 +51,6 @@ public class parryMode : MonoBehaviour
         // Handle Parry
         if (Input.GetKeyDown(KeyCode.Space) && !parryBar.isRecovering)
         {
-            Debug.Log(parryObjects.Count);
             parryOn();
         }
 
@@ -61,10 +64,12 @@ public class parryMode : MonoBehaviour
         {
             if (isParrying)
             {
+                Time.timeScale = 1f;
                 parryObjects[0].ActivateParry();
             }
             else
             {
+                Time.timeScale = 10f;
                 parryObjects[0].deactivateParry();
             }
             
@@ -73,7 +78,14 @@ public class parryMode : MonoBehaviour
         // Drain healthBar
         if(isParrying)
         {
-            currentTime -= Time.deltaTime;
+            if (parryObjects.Count > 0)
+            {
+                currentTime -= Time.deltaTime;
+            }
+            else
+            {
+                currentTime -= Time.deltaTime/3f;
+            }
 
             //if it hits bottom, go to recovery
             if (currentTime <=0)
@@ -124,16 +136,19 @@ public class parryMode : MonoBehaviour
     {
         if (pm != null && parryObjects.Contains(pm))
         {
-            Debug.Log(pm.gameObject);
             parryObjects.Remove(pm);
-            StartCoroutine(deleteAfterDelay(pm));
             // Remove things that have been parried
         }
+        StartCoroutine(deleteAfterDelay(pm));
     }
     private IEnumerator deleteAfterDelay(projectileMove pm)
     {
         yield return new WaitForSeconds(.01f);
-        Destroy(pm.gameObject);
+        if (pm !=null && pm.gameObject!=null)
+        {
+            Destroy(pm.gameObject);
+
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other)

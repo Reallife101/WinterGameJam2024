@@ -111,18 +111,18 @@ MonoBehaviour:
   ani: {fileID: 1303111552525577135}
   ShieldWorkieSFX:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 728043239
+      Data2: 1148569484
+      Data3: -1681938539
+      Data4: 473467090
+    Path: event:/[SFX] PlayerForcefield
   ShieldNoWorkieSFX:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 184171064
+      Data2: 1237224878
+      Data3: 489060278
+      Data4: 1232426913
+    Path: event:/[SFX] Shield Non Trigger
 --- !u!58 &1303111552525577122
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -177,12 +177,12 @@ MonoBehaviour:
   ani: {fileID: 1303111552525577135}
   FootstepSFX:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
-  footstepSpeed: 0.5
+      Data1: -170226076
+      Data2: 1181775879
+      Data3: -1623686011
+      Data4: 2086173708
+    Path: event:/[SFX] Footsteps
+  footstepSFXSpeed: 0.003
 --- !u!95 &1303111552525577135
 Animator:
   serializedVersion: 4

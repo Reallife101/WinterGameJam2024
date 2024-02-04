@@ -102,9 +102,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 4147209616268158424, guid: 08d1dd47aed9743479fee7f3ad14d55e, type: 3}
   bulletOffset: 0.625
-  shootDelay: 7
-  burstDelay: 0
-  burstSize: 0
+  shootDelay: 0
+  burstDelay: 8
+  burstSize: 1
   agent: {fileID: 1337095344592272117}
   playerLayer:
     serializedVersion: 2

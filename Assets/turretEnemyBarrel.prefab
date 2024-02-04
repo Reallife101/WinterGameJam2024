@@ -227,9 +227,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 671080087283281666, guid: 996a7915bbb20084a8e646eb0783939c, type: 3}
-  bulletOffset: 0.625
+  bulletOffset: 4
   shootDelay: 0
-  burstDelay: 8
+  burstDelay: 16
   burstSize: 1
   agent: {fileID: 1337095344592272117}
   pointValue: 300

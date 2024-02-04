@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using static UnityEditor.Rendering.CameraUI;
 
@@ -23,6 +24,8 @@ public class SurviveManager : MonoBehaviour
 
     [SerializeField] GameObject win;
     [SerializeField] GameObject lose;
+
+    [SerializeField] TMP_Text timeLeftText;
 
     private bool gameDone = false;
 
@@ -94,8 +97,10 @@ public class SurviveManager : MonoBehaviour
             gameDone = true;
         }
 
-        timeToSurvive -= Time.deltaTime;
+        timeLeft -= Time.deltaTime;
         spawnRateProgress -= Time.deltaTime;
+
+        timeLeftText.text = ((int)(timeLeft / 10)).ToString();
 
         if(spawnRateProgress < 0 )
         {
@@ -107,7 +112,7 @@ public class SurviveManager : MonoBehaviour
             }
         }
 
-        if(timeToSurvive < 0)
+        if(timeLeft < 0)
         {
             Time.timeScale = 0f;
             win.SetActive(true);

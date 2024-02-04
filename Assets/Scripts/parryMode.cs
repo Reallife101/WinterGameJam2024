@@ -6,7 +6,8 @@ public class parryMode : MonoBehaviour
 {
     public bool isParrying;
 
-    [SerializeField] GameObject parryVisual;
+    [SerializeField] public GameObject parryVisual;
+    [SerializeField] GameObject parryVFX;
 
     [SerializeField] healthBar parryBar;
     [SerializeField] float maxTime;
@@ -37,21 +38,24 @@ public class parryMode : MonoBehaviour
     void parryOn()
     {
         parryVisual.SetActive(true);
+        parryVFX.GetComponent<ForceField>().ActiveField();
+        isParrying = true;
         FMODUnity.RuntimeManager.StudioSystem.setParameterByName("shieldEmpty", 0);
         FMODUnity.RuntimeManager.StudioSystem.setParameterByName("ShieldOff", 0);
         FMODUnity.RuntimeManager.PlayOneShot(ShieldWorkieSFX);
-        isParrying = true;
         ani.SetBool("isParrying", true);
     }
 
     void parryOff()
     {
-        parryVisual.SetActive(false);
-        Time.timeScale = 10f;
         isParrying = false;
+        Time.timeScale = 10f;
+       //parryVisual.SetActive(false);
+        parryVFX.GetComponent<ForceField>().Toggle();
         ani.SetBool("isParrying", false);
         FMODUnity.RuntimeManager.StudioSystem.setParameterByName("ShieldOff", 1);
         FMODUnity.RuntimeManager.StudioSystem.setParameterByName("SlowDown", 0);
+        
     }
 
     // Update is called once per frame

@@ -5,44 +5,31 @@ using UnityEngine.VFX;
 
 public class ForceField : MonoBehaviour
 {
-    [SerializeField]
     private VisualEffect forceField;
     private float seconds;
     private bool inactive;
     [SerializeField]
     private bool test;
+    [SerializeField]
+    private parryMode pMode;
 void Start()
 {
-    inactive = forceField.GetBool("Inactive");
+    forceField = GetComponent<VisualEffect>();
 }
-public void Toggle(bool toggle)
+public void Toggle()
 {
-    
-    if (!toggle)
-    {
-        inactive = true;
-       // StartCoroutine(turnOff());
-
-    }
-    else {
-        gameObject.SetActive(true);
-    }
+        forceField.SetBool("Inactive", true);
+       StartCoroutine(turnOff());
+}
+public void ActiveField()
+{forceField.SetBool("Inactive", false);
 }
 private IEnumerator turnOff()
 {
-    yield return new WaitForSeconds(1f);
-    inactive = false;
-    gameObject.SetActive(false);
+    yield return new WaitForSecondsRealtime(0.25f);
+    
+    pMode.parryVisual.SetActive(false);
     
 }
-void Update()
-{
-    if (test)
-    {
-        Toggle(false);
-        
-        Debug.Log("HI");
-        test = false;
-    }
-}
+
 }

@@ -7952,6 +7952,8 @@ GameObject:
   - component: {fileID: 1555086852580738933}
   - component: {fileID: 1555086852580738931}
   - component: {fileID: 1555086852580738930}
+  - component: {fileID: 7976385478131011388}
+  - component: {fileID: 7922510679338595250}
   m_Layer: 5
   m_Name: texts
   m_TagString: Untagged
@@ -8017,6 +8019,38 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7976385478131011388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1555086852580738932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b0e04e2572f9a940a47465f6f3c2f00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Parameter: sceneStart
+  TriggerEvent: 11
+  Value: 0
+--- !u!114 &7922510679338595250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1555086852580738932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b0e04e2572f9a940a47465f6f3c2f00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Parameter: sceneStart
+  TriggerEvent: 12
+  Value: 1
 --- !u!1 &1555086852609082904
 GameObject:
   m_ObjectHideFlags: 0

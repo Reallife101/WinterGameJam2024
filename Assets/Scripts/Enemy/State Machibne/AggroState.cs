@@ -9,6 +9,7 @@ public class AggroState : EnemyState
     {
         enemy.toggleAggro(true);
         Debug.Log("Aggro Switch");
+        //enemy.SetDestination(enemy.transform.position);
     }
     public override EnemyState OnUpdate()
     {

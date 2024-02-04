@@ -5,7 +5,8 @@ using UnityEngine;
 public class barrelMove : projectileMove
 {
     [SerializeField] float blastRadius;
-    
+    [SerializeField] GameObject explosion;
+
 
 
     protected virtual void OnCollisionEnter2D(Collision2D collision)
@@ -29,6 +30,7 @@ public class barrelMove : projectileMove
             }
         }
 
+        Instantiate(explosion, transform.position, Quaternion.identity, transform.parent);
         FindObjectOfType<parryMode>().GetComponent<parryMode>().removeObject(this);
     }
 }

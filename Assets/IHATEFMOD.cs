@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class IHATEFMOD : MonoBehaviour
 {
+    [SerializeField] FMODUnity.EventReference pidgeonSFX;
+
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag.Equals("NOFMOD"))
+        if (!collision.gameObject.tag.Equals("NOFMOD"))
         {
-            //call here
+            FMODUnity.RuntimeManager.PlayOneShot(pidgeonSFX);
         }
     }
 }

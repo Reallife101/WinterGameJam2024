@@ -71,5 +71,25 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 4f7e4349ba1cc9a4d90dc96d46ef6967, type: 3}
+    - target: {fileID: 5957789526745634467, guid: d897e920b3cdf404caef81648ff2f74a, type: 3}
+      propertyPath: enemyDeathSFX.Path
+      value: event:/[SFX] Enemy Damaged
+      objectReference: {fileID: 0}
+    - target: {fileID: 5957789526745634467, guid: d897e920b3cdf404caef81648ff2f74a, type: 3}
+      propertyPath: enemyDeathSFX.Guid.Data1
+      value: 773425784
+      objectReference: {fileID: 0}
+    - target: {fileID: 5957789526745634467, guid: d897e920b3cdf404caef81648ff2f74a, type: 3}
+      propertyPath: enemyDeathSFX.Guid.Data2
+      value: 1303324344
+      objectReference: {fileID: 0}
+    - target: {fileID: 5957789526745634467, guid: d897e920b3cdf404caef81648ff2f74a, type: 3}
+      propertyPath: enemyDeathSFX.Guid.Data3
+      value: 774196120
+      objectReference: {fileID: 0}
+    - target: {fileID: 5957789526745634467, guid: d897e920b3cdf404caef81648ff2f74a, type: 3}
+      propertyPath: enemyDeathSFX.Guid.Data4
+      value: 873976738
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d897e920b3cdf404caef81648ff2f74a, type: 3}

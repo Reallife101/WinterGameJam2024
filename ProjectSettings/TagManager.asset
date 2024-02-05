@@ -8,6 +8,7 @@ TagManager:
   - Shield
   - FxTemporaire
   - enemy
+  - BossShield
   layers:
   - Default
   - TransparentFX

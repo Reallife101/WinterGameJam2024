@@ -69,7 +69,7 @@ public class Boss : MonoBehaviour
     {
         float closest = Mathf.Min((transform.position - leftPatrolPoint.transform.position).magnitude,
             (transform.position - rightPatrolPoint.transform.position).magnitude, 4);
-        rb.velocity = moveSpeed * Mathf.Lerp(.1f, 1f, closest / 4f) * direction * Vector2.right;
+        rb.velocity = moveSpeed * Mathf.Lerp(.1f, 1f, closest / 4f) * direction * Vector2.right * Time.deltaTime;
         if (transform.position.x > rightPatrolPoint.transform.position.x)
         {
             direction = -1;
@@ -78,7 +78,13 @@ public class Boss : MonoBehaviour
         {
             direction = 1;
         }
-        shield.transform.Rotate(0, 0, shieldSpinRate);
+        shield.transform.Rotate(0, 0, shieldSpinRate * Time.deltaTime);
+    }
+
+
+    private bool chance(float c)
+    {
+        return UnityEngine.Random.Range(0f, 1f) < c;
     }
 
     
@@ -132,32 +138,40 @@ public class Boss : MonoBehaviour
     {
         foreach (GameObject go in farMinionSpawnPoints)
         {
-            if (UnityEngine.Random.Range(0f, 1f) > .5)
+            if (chance(.4f))
             {
-                Instantiate(riot, go.transform.position, go.transform.rotation);
+                float prob = UnityEngine.Random.Range(0f, 1f);
+                if (prob > .5)
+                {
+                    Instantiate(riot, go.transform.position, go.transform.rotation);
+                }
+                else if (prob > .25)
+                {
+                    Instantiate(bubble, go.transform.position, go.transform.rotation);
+                }
+                else if (prob > .25)
+                {
+                    Instantiate(reg, go.transform.position, go.transform.rotation);
+                }
+                yield return new WaitForSeconds(spawnDelay);
             }
-            else if (UnityEngine.Random.Range(0f, 1f) > .25)
-            {
-                Instantiate(bubble, go.transform.position, go.transform.rotation);
-            }
-            else if (UnityEngine.Random.Range(0f, 1f) > .25)
-            {
-                Instantiate(reg, go.transform.position, go.transform.rotation);
-            }
-            yield return new WaitForSeconds(spawnDelay);
         }
 
         foreach (GameObject go in closeMinionSpawnPoints)
         {
-            if (UnityEngine.Random.Range(0, 1) > .4)
+            if (chance(.4f))
             {
-                Instantiate(bubble, go.transform.position, go.transform.rotation);
+                float prob = UnityEngine.Random.Range(0f, 1f);
+                if (prob > .4)
+                {
+                    Instantiate(bubble, go.transform.position, go.transform.rotation);
+                }
+                else
+                {
+                    Instantiate(reg, go.transform.position, go.transform.rotation);
+                }
+                yield return new WaitForSeconds(spawnDelay);
             }
-            else
-            {
-                Instantiate(reg, go.transform.position, go.transform.rotation);
-            }
-            yield return new WaitForSeconds(spawnDelay);
         }
         yield return new WaitForSeconds(5 * Time.timeScale);
         doRandom(1);

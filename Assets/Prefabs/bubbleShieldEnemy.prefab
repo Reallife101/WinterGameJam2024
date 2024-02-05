@@ -167,6 +167,26 @@ PrefabInstance:
       propertyPath: bubbleShield
       value: 
       objectReference: {fileID: 6548836402826708455}
+    - target: {fileID: 5957789526745634467, guid: d897e920b3cdf404caef81648ff2f74a, type: 3}
+      propertyPath: enemyDeathSFX.Path
+      value: event:/[SFX] Enemy Damaged
+      objectReference: {fileID: 0}
+    - target: {fileID: 5957789526745634467, guid: d897e920b3cdf404caef81648ff2f74a, type: 3}
+      propertyPath: enemyDeathSFX.Guid.Data1
+      value: 773425784
+      objectReference: {fileID: 0}
+    - target: {fileID: 5957789526745634467, guid: d897e920b3cdf404caef81648ff2f74a, type: 3}
+      propertyPath: enemyDeathSFX.Guid.Data2
+      value: 1303324344
+      objectReference: {fileID: 0}
+    - target: {fileID: 5957789526745634467, guid: d897e920b3cdf404caef81648ff2f74a, type: 3}
+      propertyPath: enemyDeathSFX.Guid.Data3
+      value: 774196120
+      objectReference: {fileID: 0}
+    - target: {fileID: 5957789526745634467, guid: d897e920b3cdf404caef81648ff2f74a, type: 3}
+      propertyPath: enemyDeathSFX.Guid.Data4
+      value: 873976738
+      objectReference: {fileID: 0}
     - target: {fileID: 8242629139246833801, guid: d897e920b3cdf404caef81648ff2f74a, type: 3}
       propertyPath: m_RootOrder
       value: 0

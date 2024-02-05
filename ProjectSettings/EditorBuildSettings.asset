@@ -11,4 +11,49 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Intro Cutscene.unity
     guid: 17679b86e0522de41ac936ea6ef2df91
+  - enabled: 1
+    path: Assets/Scenes/LEVELS/1 Kill.unity
+    guid: dc1a8bc334c705342ae06b7a240173c7
+  - enabled: 1
+    path: Assets/Scenes/LEVELS/1 Survive.unity
+    guid: 37fc9c0f8b5d36d4ea220f4c2aec79dc
+  - enabled: 1
+    path: Assets/Scenes/LEVELS/LevelEgg 1.unity
+    guid: 07246088908e0e547ba46422a6900097
+  - enabled: 1
+    path: Assets/Scenes/LEVELS/2 Kill.unity
+    guid: f9b0ed8086b35d149adc53859972d370
+  - enabled: 1
+    path: Assets/Scenes/LEVELS/2 Survive.unity
+    guid: 506b96673fca7af4bb69c29c220e2123
+  - enabled: 1
+    path: Assets/Scenes/LEVELS/3 Kill.unity
+    guid: 230a3f60209372b48a4f75f96cd1efe3
+  - enabled: 1
+    path: Assets/Scenes/LEVELS/4 Kill.unity
+    guid: 68b11584f36c12046bd7e0d9d79d6b83
+  - enabled: 1
+    path: Assets/Scenes/LEVELS/LevelKill 1.unity
+    guid: 59c940733e2b2aa4297bcec5e30d6c10
+  - enabled: 1
+    path: Assets/Scenes/LEVELS/LevelKill 2.unity
+    guid: 21d5975c8e8bbc048ba258d5d06b5d97
+  - enabled: 1
+    path: Assets/Scenes/LEVELS/Wallnut Bowling.unity
+    guid: 0e7287d77d275854cb0ed31397cdb9f9
+  - enabled: 1
+    path: Assets/Scenes/LEVELS/Survive Ring.unity
+    guid: 1d18b27f10bf43342a9fd315103db3e0
+  - enabled: 1
+    path: Assets/Scenes/LEVELS/LevelKill 3.unity
+    guid: 86402d0ae9ce20b4d826d87c7dba7332
+  - enabled: 1
+    path: Assets/Scenes/LEVELS/SurviveLong.unity
+    guid: 7d471dc28c9c51a4c8b0e24dd80a441c
+  - enabled: 1
+    path: Assets/Scenes/LEVELS (Kill)/BOSS.unity
+    guid: b82ad7b42327c6b45b5c232347f31da0
+  - enabled: 1
+    path: Assets/Scenes/Win.unity
+    guid: d3846c1befcb3e14289369ece78bc0e8
   m_configObjects: {}

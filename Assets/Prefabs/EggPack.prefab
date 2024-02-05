@@ -6536,7 +6536,7 @@ MonoBehaviour:
   m_PivotOffset: {x: 0, y: 0, z: 0}
   m_AmplitudeGain: 0
   m_FrequencyGain: 1
-  mNoiseOffsets: {x: 0, y: 0, z: 0}
+  mNoiseOffsets: {x: -327.81396, y: 997.8092, z: -766.079}
 --- !u!1 &5609738071170824795
 GameObject:
   m_ObjectHideFlags: 0
@@ -9901,6 +9901,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5609738071801191339}
   - component: {fileID: 5609738071801191338}
+  - component: {fileID: 561748750424408853}
   m_Layer: 5
   m_Name: LoseScreen
   m_TagString: Untagged
@@ -9944,6 +9945,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05fb452874ce9cc4a829498818e20d92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &561748750424408853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5609738071801191336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 312321731
+      Data2: 1227211333
+      Data3: -593079115
+      Data4: -923100305
+    Path: event:/[CS] Lose
+  Event: 
+  PlayEvent: 11
+  StopEvent: 12
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &5609738071801574311
 GameObject:
   m_ObjectHideFlags: 0
@@ -10002,6 +10034,27 @@ MonoBehaviour:
   three: {fileID: 5609738071075627663}
   two: {fileID: 5609738071649060116}
   one: {fileID: 5609738069859032639}
+  threeSFX:
+    Guid:
+      Data1: -1438519421
+      Data2: 1139636632
+      Data3: -1427218243
+      Data4: -1189378037
+    Path: event:/[UI] 3
+  twoSFX:
+    Guid:
+      Data1: -531233802
+      Data2: 1168868013
+      Data3: 672236181
+      Data4: 1869723417
+    Path: event:/[UI] 2
+  oneSFX:
+    Guid:
+      Data1: 674782093
+      Data2: 1247157122
+      Data3: -2119921785
+      Data4: -1066919182
+    Path: event:/[UI] 1
 --- !u!95 &5609738071801574305
 Animator:
   serializedVersion: 4

@@ -26,6 +26,14 @@ public class titleScreen : MonoBehaviour
         SceneManager.LoadScene(nextSceneIndex);
     }
 
+    private void Update()
+    {
+        if (Input.GetKey(KeyCode.Q) && Input.GetKey(KeyCode.E))
+        {
+            SceneManager.LoadScene("BOSS");
+        }
+    }
+
     public void howTo()
     {
         howtoPlay.SetActive(true);
@@ -48,4 +56,5 @@ public class titleScreen : MonoBehaviour
     {
         Application.Quit();
     }
+
 }

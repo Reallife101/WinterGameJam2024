@@ -1986,10 +1986,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1661433848, guid: 0a6ff0a2e0b6afb42a90605cedeeb7d5, type: 3}
-      propertyPath: maxHealth
-      value: 25
-      objectReference: {fileID: 0}
     - target: {fileID: 1695454002842421540, guid: 0a6ff0a2e0b6afb42a90605cedeeb7d5, type: 3}
       propertyPath: leftPatrolPoint
       value: 
@@ -2610,6 +2606,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1018027150847522469, guid: dbc6cac6a302647479465888f659c046, type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 7787748781325641083, guid: dbc6cac6a302647479465888f659c046, type: 3}
       propertyPath: m_LocalPosition.y
       value: -2.3
@@ -2670,6 +2670,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9080999903774975777, guid: dbc6cac6a302647479465888f659c046, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3e4e6c867059b60489aba88a0e5bc994, type: 3}
     - target: {fileID: 9080999903854988105, guid: dbc6cac6a302647479465888f659c046, type: 3}
       propertyPath: m_Lens.OrthographicSize
       value: 12
@@ -8553,6 +8557,14 @@ PrefabInstance:
     - target: {fileID: 9080999904321888524, guid: dbc6cac6a302647479465888f659c046, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9080999904351690061, guid: dbc6cac6a302647479465888f659c046, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9080999904351690063, guid: dbc6cac6a302647479465888f659c046, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 9080999904369373433, guid: dbc6cac6a302647479465888f659c046, type: 3}
       propertyPath: m_Color.a

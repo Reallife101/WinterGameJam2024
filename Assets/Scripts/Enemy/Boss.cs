@@ -64,6 +64,11 @@ public class Boss : MonoBehaviour
         barrelAttack();
     }
 
+    public void SetPhase2()
+    {
+        return;
+    }
+
     // Update is called once per frame
     void Update()
     {

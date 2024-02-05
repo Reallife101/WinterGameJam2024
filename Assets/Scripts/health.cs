@@ -10,7 +10,7 @@ public abstract class health : MonoBehaviour
     protected int currentHealth;
     [SerializeField] protected string hurtTag = "hurt";
 
-    private void Start()
+    protected virtual void Start()
     {
         currentHealth = maxHealth;
     }

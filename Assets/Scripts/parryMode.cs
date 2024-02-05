@@ -62,6 +62,11 @@ public class parryMode : MonoBehaviour
         
     }
 
+    public void AddParry(float parryAmount)
+    {
+        currentTime += parryAmount;
+    }
+
     // Update is called once per frame
     void Update()
     {

@@ -73,7 +73,7 @@ public class Boss : MonoBehaviour
     public void SetPhase2()
     {
         phase = 1;
-        betweenWaveMult = 1.5f;
+        betweenWaveMult = 1f;
         numBullets += 4;
         moveSpeed *= 1.5f;
         shieldSpinRate *= 1.5f;
@@ -90,7 +90,7 @@ public class Boss : MonoBehaviour
     {
         float closest = Mathf.Min((transform.position - leftPatrolPoint.transform.position).magnitude,
             (transform.position - rightPatrolPoint.transform.position).magnitude, 4);
-        rb.velocity = moveSpeed * Mathf.Lerp(.1f, 1f, closest / 4f) * direction * Vector2.right * Time.deltaTime;
+        rb.velocity = moveSpeed * Mathf.Lerp(.1f, 1f, closest / 4f) * direction * Vector2.right;
         if (transform.position.x > rightPatrolPoint.transform.position.x)
         {
             direction = -1;

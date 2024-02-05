@@ -1986,6 +1986,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1661433848, guid: 0a6ff0a2e0b6afb42a90605cedeeb7d5, type: 3}
+      propertyPath: bossName
+      value: Abirdham The Aggravated
+      objectReference: {fileID: 0}
+    - target: {fileID: 1695454002842421540, guid: 0a6ff0a2e0b6afb42a90605cedeeb7d5, type: 3}
+      propertyPath: moveSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1695454002842421540, guid: 0a6ff0a2e0b6afb42a90605cedeeb7d5, type: 3}
+      propertyPath: barrelDelay
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1695454002842421540, guid: 0a6ff0a2e0b6afb42a90605cedeeb7d5, type: 3}
+      propertyPath: betweenWaveMult
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1695454002842421540, guid: 0a6ff0a2e0b6afb42a90605cedeeb7d5, type: 3}
       propertyPath: leftPatrolPoint
       value: 

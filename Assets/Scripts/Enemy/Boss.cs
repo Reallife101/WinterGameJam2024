@@ -6,6 +6,8 @@ using System;
 
 public class Boss : MonoBehaviour
 {
+    [SerializeField] private float betweenWaveMult = 3f;
+
     [Header("Movement")]
     [SerializeField] private GameObject leftPatrolPoint;
     [SerializeField] private GameObject rightPatrolPoint;
@@ -26,6 +28,7 @@ public class Boss : MonoBehaviour
 
     [Header("Minion Attack")]
     [SerializeField] private float spawnDelay;
+    [SerializeField] private float spawnProb;
 
     [Header("Spawn Points")]
     [SerializeField] private List<GameObject> farMinionSpawnPoints;
@@ -63,10 +66,23 @@ public class Boss : MonoBehaviour
     {
         barrelAttack();
     }
-
+    public int GetPhase()
+    {
+        return phase;
+    }
     public void SetPhase2()
     {
-        return;
+        phase = 1;
+        betweenWaveMult = 1.5f;
+        numBullets += 4;
+        moveSpeed *= 1.5f;
+        shieldSpinRate *= 1.5f;
+        sprayWaves += 1;
+        sprayWaveDelay *= .75f;
+        barrelDelay *= .75f;
+        numBarrels -= 2;
+        spawnDelay /= 2f;
+        spawnProb = .5f;
     }
 
     // Update is called once per frame
@@ -135,7 +151,7 @@ public class Boss : MonoBehaviour
             }
             yield return new WaitForSeconds(sprayWaveDelay);
         }
-        yield return new WaitForSeconds(3 * Time.timeScale);
+        yield return new WaitForSeconds(3 * Time.timeScale * betweenWaveMult);
         doRandom(0);
     }
 
@@ -143,7 +159,7 @@ public class Boss : MonoBehaviour
     {
         foreach (GameObject go in farMinionSpawnPoints)
         {
-            if (chance(.4f))
+            if (chance(spawnProb))
             {
                 float prob = UnityEngine.Random.Range(0f, 1f);
                 if (prob > .5)
@@ -164,7 +180,7 @@ public class Boss : MonoBehaviour
 
         foreach (GameObject go in closeMinionSpawnPoints)
         {
-            if (chance(.4f))
+            if (chance(spawnProb))
             {
                 float prob = UnityEngine.Random.Range(0f, 1f);
                 if (prob > .4)
@@ -178,7 +194,7 @@ public class Boss : MonoBehaviour
                 yield return new WaitForSeconds(spawnDelay);
             }
         }
-        yield return new WaitForSeconds(5 * Time.timeScale);
+        yield return new WaitForSeconds(5 * Time.timeScale * betweenWaveMult);
         doRandom(1);
     }
 
@@ -191,7 +207,7 @@ public class Boss : MonoBehaviour
             barrelSpawns[i % barrelSpawns.Count].transform.rotation = Quaternion.Euler(0, 0, (Mathf.Atan2(aim.y, aim.x) * Mathf.Rad2Deg));
             Instantiate(barrel, barrelSpawns[i % barrelSpawns.Count].transform.position, barrelSpawns[i % barrelSpawns.Count].transform.rotation * Quaternion.Euler(0f, 0f, -90f));
         }
-        yield return new WaitForSeconds(1 * Time.timeScale);
+        yield return new WaitForSeconds(1 * Time.timeScale * betweenWaveMult);
         doRandom(2);
     }
 

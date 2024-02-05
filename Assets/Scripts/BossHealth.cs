@@ -25,9 +25,10 @@ public class BossHealth : EnemyHealth
     {
         base.TakeDamage(i);
         setHealthMeter();
-        if (getHealth() < getMaxHealth() / 2)
+        if (getHealth() < getMaxHealth() / 2 && boss.GetPhase() == 0)
         {
             boss.SetPhase2();
+            healthIndicator.color = Color.red;
         }
     }
 }

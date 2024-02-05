@@ -9,6 +9,8 @@ TagManager:
   - FxTemporaire
   - enemy
   - BossShield
+  - Egg
+  - NOFMOD
   layers:
   - Default
   - TransparentFX

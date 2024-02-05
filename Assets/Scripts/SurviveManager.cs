@@ -27,6 +27,8 @@ public class SurviveManager : MonoBehaviour
 
     [SerializeField] TMP_Text timeLeftText;
 
+    [SerializeField] bool genericSpawner = false;
+
     private bool gameDone = false;
 
     public List<GameObject> WAYPOINTS { get { return waypoints; } }
@@ -112,7 +114,7 @@ public class SurviveManager : MonoBehaviour
             }
         }
 
-        if(timeLeft < 0)
+        if(timeLeft < 0 && !genericSpawner)
         {
             Time.timeScale = 0f;
             win.SetActive(true);

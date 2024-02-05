@@ -30,12 +30,4 @@ public class pointManager : MonoBehaviour
         comboManager.CM_Instance.GainComboPoints(pointsGained);
         score.text = totalPoints.ToString();
     }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Tab))
-        {
-            GainPoint(1000);
-        }
-    }
 }

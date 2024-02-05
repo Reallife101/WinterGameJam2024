@@ -807,11 +807,11 @@ MonoBehaviour:
   deathExplosion: {fileID: 0}
   enemyDeathSFX:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 714804554
+      Data2: 1302863209
+      Data3: 1188897716
+      Data4: 1860724118
+    Path: event:/[SFX] Boss dead
   healthIndicator: {fileID: 219993134}
   bossName: Abirdham The Agrivated
   boss: {fileID: 1695454002842421540}

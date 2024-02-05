@@ -10002,6 +10002,27 @@ MonoBehaviour:
   three: {fileID: 5609738071075627663}
   two: {fileID: 5609738071649060116}
   one: {fileID: 5609738069859032639}
+  threeSFX:
+    Guid:
+      Data1: -1438519421
+      Data2: 1139636632
+      Data3: -1427218243
+      Data4: -1189378037
+    Path: event:/[UI] 3
+  twoSFX:
+    Guid:
+      Data1: -531233802
+      Data2: 1168868013
+      Data3: 672236181
+      Data4: 1869723417
+    Path: event:/[UI] 2
+  oneSFX:
+    Guid:
+      Data1: 674782093
+      Data2: 1247157122
+      Data3: -2119921785
+      Data4: -1066919182
+    Path: event:/[UI] 1
 --- !u!95 &5609738071801574305
 Animator:
   serializedVersion: 4

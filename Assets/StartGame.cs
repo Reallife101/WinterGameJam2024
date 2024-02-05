@@ -11,6 +11,11 @@ public class StartGame : MonoBehaviour
     [SerializeField] GameObject two;
     [SerializeField] GameObject one;
 
+    // Audio
+    [SerializeField] FMODUnity.EventReference threeSFX;
+    [SerializeField] FMODUnity.EventReference twoSFX;
+    [SerializeField] FMODUnity.EventReference oneSFX;
+
 
     void Update()
     {
@@ -43,13 +48,16 @@ public class StartGame : MonoBehaviour
         marker.SetActive(true);
 
         three.SetActive(true);
+        FMODUnity.RuntimeManager.PlayOneShot(threeSFX);
         yield return new WaitForSeconds(0.1f);
         three.SetActive(false);
         two.SetActive(true);
+        FMODUnity.RuntimeManager.PlayOneShot(twoSFX);
 
         yield return new WaitForSeconds(0.1f);
         two.SetActive(false);
         one.SetActive(true);
+        FMODUnity.RuntimeManager.PlayOneShot(oneSFX);
 
         yield return new WaitForSeconds(0.1f);
         one.SetActive(false);

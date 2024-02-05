@@ -17,6 +17,31 @@ public class barrelMove : projectileMove
 
     }
 
+    protected override void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "borders")
+        {
+            FindObjectOfType<parryMode>().GetComponent<parryMode>().removeObject(this);
+            Debug.Log("destroy 2");
+            Destroy(gameObject);
+        }
+        if (hasBeenParryed && (collision.gameObject.tag == "BossShield" || collision.gameObject.tag == "hurt"))
+        {
+            FMODUnity.RuntimeManager.PlayOneShot(explodeSFX2);
+            explode();
+        }
+        if (hasBeenParryed && collision.gameObject.tag == "Shield")
+        {
+            Destroy(gameObject);
+        }
+
+        if (collision.gameObject.tag == "Player")
+        {
+            //DoDamage
+            FindObjectOfType<parryMode>().GetComponent<parryMode>().removeObject(this);
+        }
+    }
+
 
 
     protected void explode()

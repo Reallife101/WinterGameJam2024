@@ -3684,6 +3684,7 @@ GameObject:
   - component: {fileID: 1555086851376355062}
   - component: {fileID: 1555086851376355065}
   - component: {fileID: 1555086851376355064}
+  - component: {fileID: 4472777935957250148}
   m_Layer: 5
   m_Name: retry
   m_TagString: Untagged
@@ -3806,6 +3807,49 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1558056914701966729}
+        m_TargetAssemblyTypeName: uiSFX, Assembly-CSharp
+        m_MethodName: callUIAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &4472777935957250148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1555086851376355066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -434455217
+      Data2: 1240434198
+      Data3: -809802607
+      Data4: -2127657270
+    Path: event:/[UI] Slide
+  Event: 
+  PlayEvent: 17
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1555086851378561805
 GameObject:
   m_ObjectHideFlags: 0
@@ -3988,6 +4032,7 @@ GameObject:
   - component: {fileID: 1555086851396204217}
   - component: {fileID: 1555086851396204216}
   - component: {fileID: 1555086851396204219}
+  - component: {fileID: 1545252069070282428}
   m_Layer: 5
   m_Name: Quit
   m_TagString: Untagged
@@ -4110,6 +4155,49 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1558056914701966729}
+        m_TargetAssemblyTypeName: uiSFX, Assembly-CSharp
+        m_MethodName: callUIAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1545252069070282428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1555086851396204221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -434455217
+      Data2: 1240434198
+      Data3: -809802607
+      Data4: -2127657270
+    Path: event:/[UI] Slide
+  Event: 
+  PlayEvent: 17
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1555086851409164328
 GameObject:
   m_ObjectHideFlags: 0
@@ -8224,6 +8312,7 @@ GameObject:
   - component: {fileID: 1555086852622989174}
   - component: {fileID: 1555086852622989177}
   - component: {fileID: 1555086852622989176}
+  - component: {fileID: 4454860004276984176}
   m_Layer: 5
   m_Name: next Level
   m_TagString: Untagged
@@ -8346,6 +8435,49 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1558056914701966729}
+        m_TargetAssemblyTypeName: uiSFX, Assembly-CSharp
+        m_MethodName: callUIAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &4454860004276984176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1555086852622989178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -434455217
+      Data2: 1240434198
+      Data3: -809802607
+      Data4: -2127657270
+    Path: event:/[UI] Slide
+  Event: 
+  PlayEvent: 17
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1555086852654379803
 GameObject:
   m_ObjectHideFlags: 0
@@ -8804,6 +8936,7 @@ GameObject:
   - component: {fileID: 1555086852777584073}
   - component: {fileID: 1555086852777584072}
   - component: {fileID: 1555086852777584075}
+  - component: {fileID: 2088266952772219507}
   m_Layer: 5
   m_Name: Quit
   m_TagString: Untagged
@@ -8926,6 +9059,49 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1558056914701966729}
+        m_TargetAssemblyTypeName: uiSFX, Assembly-CSharp
+        m_MethodName: callUIAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2088266952772219507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1555086852777584077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -434455217
+      Data2: 1240434198
+      Data3: -809802607
+      Data4: -2127657270
+    Path: event:/[UI] Slide
+  Event: 
+  PlayEvent: 17
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1555086852810488011
 GameObject:
   m_ObjectHideFlags: 0
@@ -9838,6 +10014,7 @@ Transform:
   - {fileID: 1555086853168173571}
   - {fileID: 1555086851599633232}
   - {fileID: 6362755374907608848}
+  - {fileID: 4539854515526894542}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10270,6 +10447,7 @@ MonoBehaviour:
   win: {fileID: 1555086852075337416}
   lose: {fileID: 1555086852580634491}
   timeLeftText: {fileID: 7686554576486032110}
+  genericSpawner: 0
   spawnRate: 50
 --- !u!1 &6362755375154474696
 GameObject:
@@ -10339,6 +10517,57 @@ MonoBehaviour:
   m_InputActionsPerSecond: 10
   m_RepeatDelay: 0.5
   m_ForceModuleActive: 0
+--- !u!1 &6377907599034388572
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4539854515526894542}
+  - component: {fileID: 1558056914701966729}
+  m_Layer: 0
+  m_Name: UI button SFX
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4539854515526894542
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6377907599034388572}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 374.59744, y: 240.9818, z: -4.4940343}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1555086853225057929}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1558056914701966729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6377907599034388572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe4ef9791e9403141b540de87e96c892, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Button:
+    Guid:
+      Data1: -1556584667
+      Data2: 1337029356
+      Data3: 1027820728
+      Data4: -771986459
+    Path: event:/[UI] On click
 --- !u!1001 &1555086852845981377
 PrefabInstance:
   m_ObjectHideFlags: 0

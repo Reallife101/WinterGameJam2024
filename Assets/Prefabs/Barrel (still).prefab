@@ -184,19 +184,19 @@ MonoBehaviour:
   explosion: {fileID: 3056570002468307942, guid: 122a34ee43d27d94a882ea2fd09ba145, type: 3}
   explodeSFX2:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -845053302
+      Data2: 1117237680
+      Data3: 324984209
+      Data4: 407678908
+    Path: event:/[SFX] Grenade
   ani: {fileID: 6209901796870865946}
   explodeSFX1:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -845053302
+      Data2: 1117237680
+      Data3: 324984209
+      Data4: 407678908
+    Path: event:/[SFX] Grenade
 --- !u!1 &671080087959905186
 GameObject:
   m_ObjectHideFlags: 0

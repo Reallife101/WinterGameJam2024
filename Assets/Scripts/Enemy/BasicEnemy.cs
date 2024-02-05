@@ -12,6 +12,7 @@ public class BasicEnemy : MonoBehaviour
     [SerializeField] private int burstSize;
     [SerializeField] NavMeshAgent agent;
     [SerializeField] private int pointValue = 300;
+    [SerializeField] private float parryOnDeathAmount = 0.7f;
     private float shootTimer;
     private float burstTimer;
     private int burstNumber;
@@ -108,6 +109,7 @@ public class BasicEnemy : MonoBehaviour
 
     private void OnDestroy()
     {
+        player?.transform.parent.gameObject.GetComponent<parryMode>().AddParry(parryOnDeathAmount);
         pointManager.PM_Instance.GainPoint(pointValue);
     }
 }

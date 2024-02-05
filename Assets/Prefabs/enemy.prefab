@@ -234,6 +234,7 @@ MonoBehaviour:
   burstSize: 1
   agent: {fileID: 1337095344592272117}
   pointValue: 300
+  parryOnDeathAmount: 0.7
   detectionRange: 100000
   waypoints:
   - {fileID: 5245259493963118350}
@@ -253,6 +254,13 @@ MonoBehaviour:
   hurtTag: hurt
   bubbleShield: {fileID: 0}
   deathExplosion: {fileID: 1134129239631916, guid: 6145096fe78596440a6ad2f31373192c, type: 3}
+  enemyDeathSFX:
+    Guid:
+      Data1: 773425784
+      Data2: 1303324344
+      Data3: 774196120
+      Data4: 873976738
+    Path: event:/[SFX] Enemy Damaged
 --- !u!195 &1337095344592272117
 NavMeshAgent:
   m_ObjectHideFlags: 0

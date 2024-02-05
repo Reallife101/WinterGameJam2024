@@ -7,6 +7,7 @@ public class EnemyHealth : health
 {
     [SerializeField] private GameObject bubbleShield;
     [SerializeField] private GameObject deathExplosion;
+    [SerializeField] FMODUnity.EventReference enemyDeathSFX;
 
     public override void TakeDamage(int i = 1)
     {
@@ -14,6 +15,7 @@ public class EnemyHealth : health
         if (currentHealth <= 0) {
             if (deathExplosion != null)
             {
+                FMODUnity.RuntimeManager.PlayOneShot(enemyDeathSFX);
                 Instantiate(deathExplosion, transform.position, Quaternion.identity, transform.parent);
 
             }

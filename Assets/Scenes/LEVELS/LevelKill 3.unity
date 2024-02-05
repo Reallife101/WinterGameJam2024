@@ -32328,7 +32328,7 @@ MonoBehaviour:
   tierText: {fileID: 1486045655880885372}
   multiplierText: {fileID: 1486045656762709138}
   comboMeterBackground: {fileID: 1486045655675952394}
-  comboDecayPercentagePerSecond: 0.1
+  comboDecayPercentagePerSecond: 0.01
   transitionDuration: 0.5
   derankSound:
     Guid:
@@ -32641,6 +32641,27 @@ MonoBehaviour:
   three: {fileID: 1486045657663547969}
   two: {fileID: 1486045657173986778}
   one: {fileID: 1486045656179037937}
+  threeSFX:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  twoSFX:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  oneSFX:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!95 &1486045657055181679
 Animator:
   serializedVersion: 4

@@ -12991,6 +12991,27 @@ MonoBehaviour:
   three: {fileID: 5925241275186355116}
   two: {fileID: 5925241274602175543}
   one: {fileID: 5925241274489333532}
+  threeSFX:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  twoSFX:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  oneSFX:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!1 &5925241274686900868
 GameObject:
   m_ObjectHideFlags: 0
@@ -13338,7 +13359,7 @@ MonoBehaviour:
   tierText: {fileID: 5925241273713808785}
   multiplierText: {fileID: 5925241275012957567}
   comboMeterBackground: {fileID: 5925241273918745831}
-  comboDecayPercentagePerSecond: 0.1
+  comboDecayPercentagePerSecond: 0.01
   transitionDuration: 0.5
   derankSound:
     Guid:

@@ -51,6 +51,9 @@ EditorBuildSettings:
     path: Assets/Scenes/LEVELS/SurviveLong.unity
     guid: 7d471dc28c9c51a4c8b0e24dd80a441c
   - enabled: 1
+    path: Assets/Scenes/LEVELS/Final Hall.unity
+    guid: fa024cfc5ec4d3e4dab2b872ae7c6925
+  - enabled: 1
     path: Assets/Scenes/LEVELS (Kill)/BOSS.unity
     guid: b82ad7b42327c6b45b5c232347f31da0
   - enabled: 1

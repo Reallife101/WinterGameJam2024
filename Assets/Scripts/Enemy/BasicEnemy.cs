@@ -30,6 +30,10 @@ public class BasicEnemy : MonoBehaviour
         {
             waypoints = SurviveManager.instance.WAYPOINTS;
         }
+        else if (FindObjectOfType<Waypoints>() != null)
+        {
+            waypoints = FindObjectOfType<Waypoints>().GetComponent<Waypoints>().waypoints;
+        }
 
         state = new PatrolState(waypoints, this, Random.Range(0, waypoints.Count));
         shootTimer = shootDelay;
